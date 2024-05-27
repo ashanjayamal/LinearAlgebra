@@ -10,6 +10,7 @@ cover-image: cover.png
 description: |
   Linear Algbra done right
 link-citations: yes
+favicon: favicon.ico
 github-repo: rstudio/bookdown-demo
 ---
 
