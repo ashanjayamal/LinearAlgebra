@@ -5,20 +5,20 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Linear Algebra</title>
-  <meta name="description" content="Linear Algbra done right" />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+  <meta name="description" content="<p>Linear Algbra done right</p>" />
+  <meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7" />
 
   <meta property="og:title" content="Linear Algebra" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="https://ashanjayamal.github.io/LinearAlgebra/cover.jpeg" />
-  <meta property="og:description" content="Linear Algbra done right" />
+  <meta property="og:image" content="<a href="https://ashanjayamal.github.io/LinearAlgebra/" class="uri">https://ashanjayamal.github.io/LinearAlgebra/</a>/cover.jpeg" />
+  <meta property="og:description" content="<p>Linear Algbra done right</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Linear Algebra" />
   
-  <meta name="twitter:description" content="Linear Algbra done right" />
-  <meta name="twitter:image" content="https://ashanjayamal.github.io/LinearAlgebra/cover.jpeg" />
+  <meta name="twitter:description" content="<p>Linear Algbra done right</p>" />
+  <meta name="twitter:image" content="<a href="https://ashanjayamal.github.io/LinearAlgebra/" class="uri">https://ashanjayamal.github.io/LinearAlgebra/</a>/cover.jpeg" />
 
 <meta name="author" content="Ashan Jayamal" />
 
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="exercise-1a.html"/>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -41,14 +41,14 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
@@ -67,29 +67,32 @@
 
 
 
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">Linear Algebra</h1>
+<p class="author"><em>Ashan Jayamal</em></p>
+<p class="date"><em>2024-05-27</em></p>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
     <div class="book-summary">
       <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Vector space</a>
+<!--bookdown:toc2:start-->
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a"><i class="fa fa-check"></i><b>1.1</b> a</a>
+<li><a href="#vector-space" id="toc-vector-space"><span class="toc-section-number">1</span> Vector space</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#lists"><i class="fa fa-check"></i><b>1.1.1</b> Lists</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#fn"><i class="fa fa-check"></i><b>1.1.2</b> Fn</a></li>
+<li><a href="#a" id="toc-a"><span class="toc-section-number">1.1</span> a</a>
+<ul>
+<li><a href="#lists" id="toc-lists"><span class="toc-section-number">1.1.1</span> Lists</a></li>
+<li><a href="#fn" id="toc-fn"><span class="toc-section-number">1.1.2</span> Fn</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="exercise-1a.html"><a href="exercise-1a.html"><i class="fa fa-check"></i><b>2</b> Exercise 1A</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
+<li><a href="#exercise-1a" id="toc-exercise-1a"><span class="toc-section-number">2</span> Exercise 1A</a></li>
 </ul>
-
+<!--bookdown:toc2:end-->
       </nav>
     </div>
 
@@ -105,19 +108,16 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Linear Algebra</h1>
-<p class="author"><em>Ashan Jayamal</em></p>
-<p class="date"><em>2024-05-27</em></p>
-</div>
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
 <div id="vector-space" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Vector space<a href="index.html#vector-space" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1 class="hasAnchor"><span class="header-section-number">1</span> Vector space<a href="#vector-space" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="a" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> a<a href="index.html#a" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2 class="hasAnchor"><span class="header-section-number">1.1</span> a<a href="#a" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math inline">\(\mathbb{R}^n\)</span> and <span class="math inline">\(\mathbb{C}^n\)</span>
 We are already be familiar with basic properties of the set of real numbers(<span class="math inline">\(\mathbb{R}\)</span>). Complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of <span class="math inline">\(−1\)</span>, denoted by <span class="math inline">\(i\)</span> that obeys the usual rules of arithmetic. Here are the formal defnition.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 1.1  (Complex Numbers ) </strong></span></p>
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>(#def:unnamed-chunk-1) (Complex Numbers ) </strong></span></p>
 <ul>
 <li>A complex number is an ordered pair <span class="math inline">\((x, y)\)</span>, where <span class="math inline">\(x, y \in \mathbb{R}\)</span>, but we will write this as <span class="math inline">\(x + yi\)</span>.</li>
 <li>The set of all complex numbers is denoted by <span class="math inline">\(\mathbb{C}\)</span>:
@@ -135,7 +135,7 @@ here <span class="math inline">\(x, y, u, v \in \mathbb{R}\)</span></li>
 <li>The definition of multiplication for complex numbers is based on the assumption that <span class="math inline">\(i^2 = -1\)</span>. Using the standard arithmetic rules, we can derive the formula for the product of two complex numbers. This formula can then be used to confirm that <span class="math inline">\(i^2\)</span> indeed equals <span class="math inline">\(-1\)</span>.</li>
 </ul>
 <div class="example">
-<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 1.1  </strong></span>Let’s calculate the product of two complex numbers <span class="math inline">\((1 + 2i)\)</span> and <span class="math inline">\((3 + 4i)\)</span> using the distributive and commutative properties:</p>
+<p><span id="exm:unnamed-chunk-2" class="example"><strong>(#exm:unnamed-chunk-2) </strong></span>Let’s calculate the product of two complex numbers <span class="math inline">\((1 + 2i)\)</span> and <span class="math inline">\((3 + 4i)\)</span> using the distributive and commutative properties:</p>
 <p><span class="math display">\[\begin{align*}
 (1 + 2i)(3 + 4i) &amp;= 1 \cdot (3 + 4i) + (2i)(3 + 4i) \\
 &amp;= 1 \cdot 3 + 1 \cdot 4i + 2i \cdot 3 + (2i)(4i) \\
@@ -144,7 +144,7 @@ here <span class="math inline">\(x, y, u, v \in \mathbb{R}\)</span></li>
 \end{align*}\]</span></p>
 </div>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-3" class="proposition"><strong>Proposition 1.1  (Properties of Complex Arithmetic) </strong></span></p>
+<p><span id="prp:unnamed-chunk-3" class="proposition"><strong>(#prp:unnamed-chunk-3) (Properties of Complex Arithmetic) </strong></span></p>
 <ul>
 <li><strong>Commutativity</strong>: <span class="math inline">\(z_1 + z_2 = z_2 + z_1\)</span> and <span class="math inline">\(z_1z_2 = z_2z_1\)</span> for all <span class="math inline">\(z_1, z_2 \in \mathbb{C}\)</span>.</li>
 <li><strong>Associativity</strong>: <span class="math inline">\((z_1 + z_2) + z_3 = z_1 + (z_2 + z_3)\)</span> and <span class="math inline">\((z_1z_2)z_3 = z_1(z_2z_3)\)</span> for all <span class="math inline">\(z_1, z_2, z_3 \in \mathbb{C}\)</span>.</li>
@@ -170,7 +170,7 @@ and</p>
 <p>So, we have proved that both addition and multiplication are commutative operations in the set of complex numbers. This means that the order in which complex numbers are added or multiplied does not affect the result.</p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-5" class="definition"><strong>Definition 1.2  (Subtraction,Division) </strong></span>Let’s suppose <span class="math inline">\(z_1, z_2 \in \mathbb{C}\)</span>.</p>
+<p><span id="def:unnamed-chunk-5" class="definition"><strong>(#def:unnamed-chunk-5) (Subtraction,Division) </strong></span>Let’s suppose <span class="math inline">\(z_1, z_2 \in \mathbb{C}\)</span>.</p>
 <ul>
 <li>The negative of a complex number <span class="math inline">\(z_1\)</span> is denoted as <span class="math inline">\(-z_1\)</span>. It is the unique complex number such that <span class="math display">\[z_1 + (-z_1) = 0.\]</span></li>
 <li>Subtraction in the set of complex numbers is defined as <span class="math display">\[z_1 - z_2 = z_1 + (-z_2).\]</span></li>
@@ -187,10 +187,10 @@ This definition implies that
 <span class="math display">\[(\alpha^m)^n=\alpha^{mn}\quad \text {and} \quad(\alpha\beta)^m=\alpha^m\beta^m\]</span>
 for all <span class="math inline">\(\alpha\beta\in \mathbb{F}\)</span> and all positive integers <span class="math inline">\(m,n\)</span>.</p>
 <div id="lists" class="section level3 hasAnchor" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Lists<a href="index.html#lists" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3 class="hasAnchor"><span class="header-section-number">1.1.1</span> Lists<a href="#lists" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before defining <span class="math inline">\(\mathbb{R}^n\)</span> and <span class="math inline">\(\mathbb{C}^n\)</span>, we look at two important examples.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-6" class="example"><strong>Example 1.2  </strong></span></p>
+<p><span id="exm:unnamed-chunk-6" class="example"><strong>(#exm:unnamed-chunk-6) </strong></span></p>
 <ul>
 <li>The set <span class="math inline">\(\mathbb{R}^2\)</span> , which you can think of as a plane, is the set of all ordered pairs of real numbers:
 <span class="math display">\[\mathbb{R}^2:=\{(x,y):x,y\in \mathbb{R}\}\]</span></li>
@@ -200,7 +200,7 @@ for all <span class="math inline">\(\alpha\beta\in \mathbb{F}\)</span> and all p
 </div>
 <p>Let’s generalize this examples to higher dimensions.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-7" class="definition"><strong>Definition 1.3  (List,Length) </strong></span></p>
+<p><span id="def:unnamed-chunk-7" class="definition"><strong>(#def:unnamed-chunk-7) (List,Length) </strong></span></p>
 <ul>
 <li>Suppose <span class="math inline">\(n\)</span> is a nonnegative integer. A <em>list</em> of <em>length</em> <span class="math inline">\(n\)</span> is an ordered collection of <span class="math inline">\(n\)</span> elements (which might be numbers, other lists, or more abstract objects).</li>
 <li>Two lists are equal if and only if they have the same length and the same elements in the same order</li>
@@ -213,7 +213,7 @@ for all <span class="math inline">\(\alpha\beta\in \mathbb{F}\)</span> and all p
 <p>We consider such an object to be a list so that some of our theorems will not have trivial exceptions.</p>
 <p>Lists differ from sets in two ways: in lists, order matters and repetitions have meaning; in sets, order and repetitions are irrelevant.</p>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-8" class="proposition"><strong>Proposition 1.2  (Lists versus Sets) </strong></span></p>
+<p><span id="prp:unnamed-chunk-8" class="proposition"><strong>(#prp:unnamed-chunk-8) (Lists versus Sets) </strong></span></p>
 <ul>
 <li>The lists <span class="math inline">\((3, 5)\)</span> and <span class="math inline">\((5, 3)\)</span> are not equal, but the sets <span class="math inline">\(\{3, 5\}\)</span> and <span class="math inline">\(\{5, 3\}\)</span> are equal.</li>
 <li>The lists <span class="math inline">\((4, 4)\)</span> and <span class="math inline">\((4, 4, 4)\)</span> are not equal (they do not have the same length), although the sets <span class="math inline">\(\{4, 4\}\)</span> and <span class="math inline">\(\{4, 4, 4\}\)</span> both equal the set <span class="math inline">\(\{4\}\)</span>.</li>
@@ -221,28 +221,28 @@ for all <span class="math inline">\(\alpha\beta\in \mathbb{F}\)</span> and all p
 </div>
 </div>
 <div id="fn" class="section level3 hasAnchor" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> Fn<a href="index.html#fn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3 class="hasAnchor"><span class="header-section-number">1.1.2</span> Fn<a href="#fn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math inline">\(\mathbb{F}^n\)</span>
 Fix a positive integer <span class="math inline">\(\mathbb{F}^n\)</span> for the rest of this chapter.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-9" class="definition"><strong>Definition 1.4  </strong></span><span class="math inline">\(\mathbb{F}^n\)</span> is the set of all lists of length <span class="math inline">\(n\)</span> of elements of <span class="math inline">\(\mathcal{F}\)</span>:
+<p><span id="def:unnamed-chunk-9" class="definition"><strong>(#def:unnamed-chunk-9) </strong></span><span class="math inline">\(\mathbb{F}^n\)</span> is the set of all lists of length <span class="math inline">\(n\)</span> of elements of <span class="math inline">\(\mathcal{F}\)</span>:
 <span class="math display">\[\mathbb{F}^n = \{(x_1, \ldots, x_n) \mid x_i \in \mathbb{F} \text{ for } i = 1, \ldots, n\}.\]</span>
 For <span class="math inline">\((x_1, \ldots, x_n) \in \mathbb{F}^n\)</span> and <span class="math inline">\(i \in \{1, \ldots, n\}\)</span>, we say that <span class="math inline">\(x_i\)</span> is the <span class="math inline">\(i\)</span>th coordinate of <span class="math inline">\((x_1, \ldots, x_n)\)</span>.</p>
 </div>
 <p>If <span class="math inline">\(\mathbb{F}=\mathbb{R}\)</span> and <span class="math inline">\(n\)</span> equals <span class="math inline">\(2\)</span> or <span class="math inline">\(3\)</span>, then the definition above of <span class="math inline">\(\mathbb{F}^n\)</span> agrees with our previous notions of <span class="math inline">\(\mathbb{R}^2\)</span> and <span class="math inline">\(\mathbb{R}^3\)</span>.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-10" class="example"><strong>Example 1.3  </strong></span>Let <span class="math inline">\(\mathbb{C}^4\)</span> be the set of all lists of four complex numbers:
+<p><span id="exm:unnamed-chunk-10" class="example"><strong>(#exm:unnamed-chunk-10) </strong></span>Let <span class="math inline">\(\mathbb{C}^4\)</span> be the set of all lists of four complex numbers:
 <span class="math display">\[\mathbb{C}^4 = \{(z_1, z_2, z_3, z_4) \mid z_1, z_2, z_3, z_4 \in \mathbb{C}\}.\]</span></p>
 </div>
 <p>If <span class="math inline">\(n \geq 4\)</span>, we cannot visualize <span class="math inline">\(\mathbb{R}^n\)</span> as a physical object. Similarly, <span class="math inline">\(\mathbb{C}^1\)</span> can be thought of as a plane, but for <span class="math inline">\(n \geq 2\)</span>, the human brain cannot provide a full image of <span class="math inline">\(\mathbb{R}^n\)</span>. However, even if <span class="math inline">\(n\)</span> is large, we can perform algebraic manipulations in <span class="math inline">\(\mathbb{C}^n\)</span> as easily as in <span class="math inline">\(\mathbb{R}^2\)</span> or <span class="math inline">\(\mathbb{R}^3\)</span>. For example, addition in <span class="math inline">\(\mathbb{R}^n\)</span> is defined as follows.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 1.5  (addition of higer dimesionans) </strong></span>Addition in <span class="math inline">\(\mathbb{F}^n\)</span> is defined by adding corresponding coordinates:<span class="math display">\[
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>(#def:unnamed-chunk-11) (addition of higer dimesionans) </strong></span>Addition in <span class="math inline">\(\mathbb{F}^n\)</span> is defined by adding corresponding coordinates:<span class="math display">\[
 (a_1, …, a_n) + (b_1, …, b_n) = (a_1 + b_1, …, a_n + b_n)
 \]</span></p>
 </div>
 <p>Often the mathematics of <span class="math inline">\(\mathbb{R}^n\)</span> becomes cleaner if we use a single letter to denote a list of <span class="math inline">\(n\)</span> numbers, without explicitly writing the coordinates. For example, the next result is stated with <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in <span class="math inline">\(\mathbb{R}^n\)</span> even though the proof requires the more cumbersome notation of <span class="math inline">\((x_1, \ldots, x_n)\)</span> and <span class="math inline">\((y_1, \ldots, y_n)\)</span>.</p>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-12" class="proposition"><strong>Proposition 1.3  </strong></span>If <span class="math inline">\(a, b \in \mathbb{F}^n\)</span>, then <span class="math inline">\(a+b=b+a\)</span>.</p>
+<p><span id="prp:unnamed-chunk-12" class="proposition"><strong>(#prp:unnamed-chunk-12) </strong></span>If <span class="math inline">\(a, b \in \mathbb{F}^n\)</span>, then <span class="math inline">\(a+b=b+a\)</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>Suppose <span class="math inline">\(a = (a_1, …, a_n) \in \mathbb{F}^n\)</span> and <span class="math inline">\(b = (b_1, …, b_n) \in \mathbb{F}^n\)</span>. Then</p>
@@ -256,69 +256,43 @@ a+b
 \end{eqnarray}\]</span></p>
 <p>where the second and fourth equalities above hold because of the definition of addition in <span class="math inline">\(\mathbb{F}^n\)</span> and the third equality holds because of the usual commutativity of addition in <span class="math inline">\(\mathbb{F}\)</span>.</p>
 </div>
-
+<!--chapter:end:index.Rmd-->
 </div>
 </div>
 </div>
+<div id="exercise-1a" class="section level1 hasAnchor" number="2">
+<h1 class="hasAnchor"><span class="header-section-number">2</span> Exercise 1A<a href="#exercise-1a" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li>Show that <span class="math inline">\(\alpha + \beta = \beta + \alpha\)</span> for all <span class="math inline">\(\alpha, \beta \in \mathbb{C}\)</span>.</li>
+</ol>
+<p><img src="fig/Ex1A/Ex1.png" width="636" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Show that <span class="math inline">\((\alpha + \beta) + \lambda = \alpha + (\beta + \lambda)\)</span> for all <span class="math inline">\(\alpha, \beta, \lambda \in \mathbb{C}\)</span>.</li>
+</ol>
+<p><img src="fig/Ex1A/Ex2.png" width="536" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Show that <span class="math inline">\((\alpha \beta)\lambda = \alpha(\beta \lambda)\)</span> for all <span class="math inline">\(\alpha, \beta, \lambda \in \mathbb{C}\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(\lambda(\alpha + \beta) = \lambda\alpha + \lambda\beta\)</span> for all <span class="math inline">\(\lambda, \alpha, \beta \in \mathbb{C}\)</span>.</p></li>
+<li><p>Show that for every <span class="math inline">\(\alpha \in \mathbb{C}\)</span>, there exists a unique <span class="math inline">\(\beta \in \mathbb{C}\)</span> such that <span class="math inline">\(\alpha + \beta = 0\)</span>.</p></li>
+<li><p>Show that for every <span class="math inline">\(\alpha \in \mathbb{C}\)</span> with <span class="math inline">\(\alpha \neq 0\)</span>, there exists a unique <span class="math inline">\(\beta \in \mathbb{C}\)</span> such that <span class="math inline">\(\alpha\beta = 1\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(\frac{-1 + \sqrt{3}i}{2}\)</span> is a cube root of 1 (meaning that its cube equals 1).</p></li>
+<li><p>Find two distinct square roots of <span class="math inline">\(i\)</span>.</p></li>
+<li><p>Find <span class="math inline">\(x \in \mathbb{R}^4\)</span> such that <span class="math inline">\((4, -3, 1, 7) + 2x = (5, 9, -6, 8)\)</span>.</p></li>
+<li><p>Explain why there does not exist <span class="math inline">\(\lambda \in \mathbb{C}\)</span> such that <span class="math inline">\(\lambda(2 - 3i, 5 + 4i, -6 + 7i) = (12 - 5i, 7 + 22i, -32 - 9i)\)</span>.</p></li>
+</ol>
+<!--chapter:end:01-intro.Rmd-->
+</div>
+<!--bookdown:body:end-->
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="exercise-1a.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["_main.pdf", "_main.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
-});
-});
-</script>
+<!--bookdown:config-->
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

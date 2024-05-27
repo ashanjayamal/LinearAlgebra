@@ -1,3 +1,3 @@
 Welcome! 
 
-This is my work on Linear algbera.
+This is my work on Linear algebra.
