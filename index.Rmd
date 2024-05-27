@@ -6,7 +6,7 @@ site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 url: https://ashanjayamal.github.io/LinearAlgebra/
-cover-image: cover.jpeg
+cover-image: cover.png
 description: |
   Linear Algbra done right
 link-citations: yes
@@ -16,7 +16,7 @@ github-repo: rstudio/bookdown-demo
 # Vector space
 ## a
 $\mathbb{R}^n$ and $\mathbb{C}^n$
-We are already be familiar with basic properties of the set  of real numbers($\mathbb{R}$). Complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of $−1$, denoted by $i$ that obeys the usual rules of arithmetic. Here are the formal defnition.
+We are already be familiar with basic properties of the set  of real numbers($\mathbb{R}$). Complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of $−1$, denoted by $i$ that obeys the usual rules of arithmetic. Here are the formal definition.
 
 ```{definition,name='Complex Numbers '}
 
@@ -96,7 +96,7 @@ So that we can conveniently make definitions and prove theorems that apply to bo
 
 Elements of $\mathbb{F}$  are called scalars. The word “scalar” (which is just a fancy word for “number”) is often used when we want to emphasize that an object is a number, as opposed to a vector (vectors will be defined soon).
 
-For $\alpha \in \mathbb{F} and $m$ a positive integer, we define $\alpha^m$ to denote the product of $\alpha$ with itself $m$ times:
+For $\alpha \in \mathbb{F}$ and $m$ a positive integer, we define $\alpha^m$ to denote the product of $\alpha$ with itself $m$ times:
 \[\alpha^m=\underbrace{\alpha\cdot \alpha \cdots \alpha}_{ m \text{times}}\].
 This definition implies that
 \[(\alpha^m)^n=\alpha^{mn}\quad \text {and} \quad(\alpha\beta)^m=\alpha^m\beta^m\]
