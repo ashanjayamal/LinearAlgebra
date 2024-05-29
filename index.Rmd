@@ -17,6 +17,8 @@ github-repo: rstudio/bookdown-demo
 # Vector space
 ## a
 $\mathbb{R}^n$ and $\mathbb{C}^n$
+
+
 We are already be familiar with basic properties of the set  of real numbers($\mathbb{R}$). Complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of $−1$, denoted by $i$ that obeys the usual rules of arithmetic. Here are the formal definition.
 
 ```{definition,name='Complex Numbers '}
