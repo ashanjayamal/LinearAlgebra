@@ -80,7 +80,7 @@
 
 \title{Linear Algebra}
 \author{Ashan Jayamal}
-\date{2024-05-29}
+\date{2024-06-24}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -341,7 +341,224 @@ a+b
 where the second and fourth equalities above hold because of the definition of addition in \(\mathbb{F}^n\) and the third equality holds because of the usual commutativity of addition in \(\mathbb{F}\).
 \end{proof}
 
-\chapter{Exercise 1A}\label{exercise-1a}
+\section{Definition of Vector space}\label{definition-of-vector-space}
+
+We will define a vector space to be a set \(V\)with an addition and a scalar multiplication on \(V\) that satisfy the properties in the paragraph above.
+
+\begin{definition}[addition, scalar multiplication]
+\protect\hypertarget{def:unnamed-chunk-14}{}\label{def:unnamed-chunk-14}\leavevmode
+
+\begin{itemize}
+\tightlist
+\item
+  An addition on set \(V\) is a function that assigns an element \(u+v\in V ~~~ u,v,\in V\) .
+\item
+  A scalar multiplication on a set \(V\)is a function that assigns an element \(\lambda v \in V\) to each \(\lambda\in F\) and each \(v \in V\)
+\end{itemize}
+
+\end{definition}
+
+Now we are ready to give the formal definition of a vector space
+
+\begin{definition}[Vector Space]
+\protect\hypertarget{def:unnamed-chunk-15}{}\label{def:unnamed-chunk-15}
+
+A vector space is a set \(V\) along with an addition on \(V\) and a scalar multiplication on \(V\) such that the following properties hold.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Commutativity}: \(u + v = v + u\) for all \(u, v \in V\).
+\item
+  \textbf{Associativity}: \((u + v) + w = u + (v + w)\) and \((ab)c = a(bc)\) for all \(u, v, w \in V\) and for all \(a, b \in \mathbb{F}\).
+\item
+  \textbf{Additive Identity}: There exists an element \(0 \in V\) such that \(v + 0 = v\) for all \(v \in V\).
+\item
+  \textbf{Additive Inverse}: For every \(v \in V\), there exists \(-v \in V\) such that \(v + (-v) = 0\).
+\item
+  \textbf{Multiplicative Identity}: \(1v = v\) for all \(v \in V\).
+\item
+  \textbf{Distributive Properties}: \(a(v + w) = av + aw\) and \((a + b)v = av + bv\) for all \(v, w \in V\) and all \(a, b \in \mathbb{F}\).
+\end{itemize}
+
+\end{definition}
+
+The following geometric language sometimes aids our intuition.
+
+\begin{definition}[Vector]
+\protect\hypertarget{def:unnamed-chunk-16}{}\label{def:unnamed-chunk-16}Elements of a vector space are called vectors or points.
+\end{definition}
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-17}{}\label{exm:unnamed-chunk-17}The simplest vector space is \{0\}, which contains only one point.
+\end{example}
+
+The scalar multiplication in a vector space depends on \(F\).
+Thus when we need to be precise, we will say that \(V\) is a vector space over \(F\) instead of saying simply that \(V\) is a vector space.
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-18}{}\label{exm:unnamed-chunk-18}\leavevmode
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mathbb{R}^n\) is a vector space over \(\mathbb{R}\)
+\item
+  \(\mathbb{C}^n\) is a vector space over \(\mathbb{C}\).
+\end{itemize}
+
+\end{example}
+
+Usually the choice of \(F\) is either clear from the context or irrelevant. Thus we often assume that \(F\) is lurking in the background without specifically mentioning it. With the usual operations of addition and scalar multiplication, \(F^n\) is a vector space over \(F\), as you should verify. The example of \(F^n\) motivated our definition of vector space.
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-19}{}\label{exm:unnamed-chunk-19}\(F^\infty\) is defined to be the set of all sequences of elements of \(F\):
+\[F^\infty = \{(f_1, f_2, \ldots) \mid f_i \in F \text{ for } i = 1, 2, \ldots\}.\]
+
+Addition and scalar multiplication on \(F^\infty\) are defined as expected:
+\begin{eqnarray*}
+(f_1, f_2, \ldots) + (g_1, g_2, \ldots) &=& (f_1 + g_1, f_2 + g_2, \ldots)\\
+\lambda(f_1, f_2, \ldots) &=& (cf_1, cf_2, \ldots).
+\end{eqnarray*}
+With these definitions, \(F^\infty\) becomes a vector space over \(F\), as you should verify.
+The additive identity in this vector space is the sequence of all 0's.
+\end{example}
+
+Our next example of a vector space involves a set of functions.
+
+\textbf{Notation}:\(F^S\)
+
+\begin{itemize}
+\tightlist
+\item
+  If \(S\) is a set, then \(F^S\) denotes the set of functions from \(S\) to \(F\).
+\item
+  For \(f,g \in F^S\), the sum \(f + g \in F^S\) is the function defined by \((f + g)(s) = f(s) + g(s)\) for all \(s \in S\).
+\item
+  For \(\lambda \in F\) and \(f \in F^S\), the product \(\lambda f \in F^S\) is the function defined by \((\lambda f)(s) = \lambda f(s)\) for all \(s \in S\).
+\end{itemize}
+
+\textbf{Remark}: As an example of the notation above, if \(S\) is the interval \([0, 1]\) and \(F=\mathbb{R}\), then \(\mathbb{R}^{[0,1]}\) is the set of real-valued functions on the interval {[}0, 1{]}
+The elements of the vector space \(\mathbb{R}^{[0,1]}\)
+are real-valued functions on \([0, 1]\), not
+lists. In general, a vector space is an
+abstract entity whose elements might
+be lists, functions, or weird objects.
+
+Now let's verify following example
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-20}{}\label{exm:unnamed-chunk-20}
+
+\textbf{\(F^S\) is a vector space}
+
+\begin{itemize}
+\tightlist
+\item
+  If \(S\) is a nonempty set, then \(F^S\) (with the operations of addition and scalar multiplication as defined above) is a vector space over \(F\).
+\item
+  The additive identity of \(F^S\) is the function \(0 \colon S \rightarrow F\) defined by \(0(s) = 0\) for all \(s \in S\).
+\item
+  For \(f \in F^S\), the additive inverse of \(-f\) is the function \(-f \colon S \rightarrow F\) defined by \((-f)(s) = -f(s)\) for all \(s \in S\).
+\end{itemize}
+
+\end{example}
+
+\begin{proof}
+
+Let \(S\) be an set non empty set and let \(f,g,h \in \mathbb{F}^S\). Let \(x\in S\). Let \(a,b\in \mathbb{F}\).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Commutataive}: \([f+g](x)=f(x)+g(x)=g(x)+f(x)=[g+f](x)\) . (Since \(f(x),g(x)\in \mathbb{F}\) and \(\mathbb{F}\) have comutataive property.)Thus \(f+g=g+f\) for all \(f,g\in \mathbb{F}\)
+\item
+  \textbf{Associativity}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \([(f+g)+h](x)=(f(x)+g(x))+h(x)=f(x)+(g(x)+h(x))=[f+(g+h)](x)\).(Since \(f(x),g(x),h(x)\in \mathbb{F}\) and \(\mathbb{F}\) have associavity property.)
+  \item
+    \([(a\cdot b)\cdot f](x)=(a\cdot b)\cdot (f(x))=a\cdot (b\cdot f(x))=[a\cdot (b\cdot f)](x)\)
+    (Since \(f(x)a,b\in \mathbb{F}\) and \(\mathbb{F}\) have associavity property.
+  \end{itemize}
+\item
+  \textbf{Aadditive Identity}: Let \(0\) be zero function \(0 \colon S \rightarrow F\) defined by \(0(s) = 0\) for all \(s \in S\). Then, \([f+0](x)=f(x)+0(x)=f(x)+0=f(x)\).Thus, \(f+0=f\) for all \(f\in F^S\).
+\item
+  \textbf{Addtive Identity}: For \(f \in F^S\), the additive inverse of \(-f\) is the function \(-f \colon S \rightarrow F\) defined by \((-f)(s) = -f(s)\) for all \(s \in S\).
+  Then \([f+(-f)](x)=f(x)+(-f)(x)=f(x)-f(x)=0=0(x)\). Thus. \(f+0=f\), for all \(f\in F^S\).
+\item
+  \textbf{Multiplicative Identity}: \([1\cdot f](x)=1\cdot(f(x))=f(x)\). Thus, \(1f=f\) for all \(f\in F^S\).
+\item
+  \textbf{Distributive Property}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \([a(f+g)](x)=a\cdot ((f+g(x)))=a(f(x)+g(x))=af(x)+ag(x)=[af](x)+[ag](x)=[af+ag](x)\).(Since \(f(x),g(x),a\in \mathbb{F}\) and \(\mathbb{F}\) have distributive property. Thus, \(a(f+g)=af+ag\) for all \(f,g\in F^S\) and \(a\in F\).
+  \item
+    \([(a+b)f](x)=(a+b)((f(x)))=a(f(x))+b(f(x))=[af](x)+[bf](x)=[af+bf](x)\).(Since \(f(x)a,b\in \mathbb{F}\) and \(\mathbb{F}\) have distributive property. Thus, \((a+b)f=af+bf\) for all \(f\in F^S\) and \(a,b\in F\)
+  \end{itemize}
+\end{itemize}
+
+\end{proof}
+
+The vector space \(F^n\) is a special case of the vector space \(F^S\) because each \((x_1, \ldots, x_n) \in F^n\) can be thought of as a function \(x\) from the set \(\{1, 2, \ldots, n\}\) to \(F\) by writing \(x(k)\) instead of \(x_k\) for the \(k^{th}\) coordinate of \((x_1, \ldots, x_n)\).
+In other words, we can think of \(F^n\) as \(F^{\{1,2,\ldots,n\}}\).
+Similarly, we can think of \(F^\infty\) as \(F^{\{1,2,\ldots\}}\).
+
+\begin{proposition}
+\protect\hypertarget{prp:unnamed-chunk-22}{}\label{prp:unnamed-chunk-22}A vector space has a unique additive identity.
+\end{proposition}
+
+\begin{proof}
+Suppose \(0\) and \(0'\) are both additive identities for some vector space \(V\).
+Then,
+\[0′ = 0′ + 0 = 0 + 0′ = 0,\]
+where the frst equality holds because \(0\) is an additive identity, the second equality
+comes from commutativity, and the third equality holds because \(0′\) is an additive identity.
+Thus \(0 ′ = 0\), proving that \(V\) has only one additive identity.
+\end{proof}
+
+\begin{proposition}
+\protect\hypertarget{prp:unnamed-chunk-24}{}\label{prp:unnamed-chunk-24}Every element in a vector space has a unique additive inverse.
+\end{proposition}
+
+\begin{proof}
+Suppose \(V\) is a vector space. Let \(v \in V\). Suppose \(w\) and \(w'\) are additive inverses of \(v\). Then
+\[ w = w + 0 = w + (v + w') = (w + v) + w' = 0 + w' = w'. \]
+Thus \(w = w'\), as desired.
+\end{proof}
+
+\textbf{Notations}: \(-v\), \(w - v\)\\
+Let \(v \in V\). Then
+- \(-v\) denotes the additive inverse of \(v\);
+- \(w - v\) is defined to be \(w + (-v)\).
+```
+
+For the rest of this note, I will use follwoing noatation.
+\emph{Notations}
+\(V\) denotes a vector space over \(F\).
+
+\begin{proposition}
+\protect\hypertarget{prp:onethirty}{}\label{prp:onethirty}\[0v=0 \text{ for all } v\in V\]
+\(0\) denotes a scalar (the number \(0 \in V\)) on the left side of the
+equation and a vector (the additive identity of \(V\)) on the right side of the equation.
+\end{proposition}
+
+\begin{proof}
+Let \(v\in V\).
+{[}0v = (0 + 0)v= 0v + 0v{]}
+Adding the additive inverse of \(0v\) to both sides of the equation above gives \(0 =0v\),as we want
+\end{proof}
+
+The result in proposition \ref{prp:onethirty} involves the additive identity of \(V\) and scalar multiplication.
+The only part of the defnition of a vector space that connects vector addition and scalar multiplication is the distributive property. Thus the distributive property must be used in the proof of proposition \ref{prp:onethirty}.
+
+\chapter{Exercise1}\label{exercise1}
+
+\section{Exercise 1A}\label{exercise-1a}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -447,6 +664,101 @@ where the second and fourth equalities above hold because of the definition of a
 \item
   Show that \((a + b)x = ax + bx\) for all \(a, b \in \mathbb{F}\) and all \(x \in \mathbb{F}_n\).
 \end{enumerate}
+
+\section{Exercise 1B}\label{exercise-1b}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Prove that \(−(−v) = v\) for every \(v\in V\).
+  \textbf{Solution}:
+  Let \(v\in V\). Then there exist a unique additive inverse of \(v\). We denote it by \(-v\). Thus,
+  \[v+(-v)=0.\] Then by definition, additive inverse of \((-v)\) is v. We denote it by \(-(-v)=v\).
+\item
+  Suppose \(a \in \mathbb{F} ,v\in V\), and \(v= 0\). Prove that \(a=0\) or \(v=0\).
+\end{enumerate}
+
+\includegraphics{fig/Ex1B/Ex2.jpg}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  \includegraphics{fig/Ex1B/Ex3-1.jpg}
+  \includegraphics{fig/Ex1B/Ex3-2.jpg}
+\item
+\end{enumerate}
+
+\includegraphics[width=10.51in]{fig/Ex1B/Ex4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+\end{enumerate}
+
+\includegraphics[width=9.54in]{fig/Ex1B/Ex5-1}
+
+\includegraphics[width=9.72in]{fig/Ex1B/Ex5-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+\end{enumerate}
+
+\includegraphics[width=9.94in]{fig/Ex1B/Ex6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Suppose \(S\) is a non-empty set.
+  Let \(V^S\) denote the set of functions from \(S\) to \(V\).
+  Define a natural addition and scalar multiplication on \(V^S\), and show that \(V^S\) is a vector space with these definitions.
+\end{enumerate}
+
+\includegraphics[width=9.33in]{fig/Ex1B/Ex7-1}
+
+\includegraphics[width=8.79in]{fig/Ex1B/Ex7-2}
+
+\includegraphics[width=8.42in]{fig/Ex1B/Ex7-3}
+
+\includegraphics[width=8.33in]{fig/Ex1B/Ex7-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+\end{enumerate}
+
+\includegraphics[width=9.96in]{fig/Ex1B/Ex8-1}
+
+\includegraphics[width=9.12in]{fig/Ex1B/Ex8-2}
+
+\includegraphics[width=9.89in]{fig/Ex1B/Ex8-3}
+
+\includegraphics[width=9.58in]{fig/Ex1B/Ex8-4}
+
+\includegraphics[width=9.75in]{fig/Ex1B/Ex8-5}
+
+\section{Exercise 1C}\label{exercise-1c}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+\end{enumerate}
+
+\includegraphics[width=9.19in]{fig/Ex1C/Ex1-1}
+
+\includegraphics[width=9.12in]{fig/Ex1C/Ex1-2}
+
+\includegraphics[width=8.89in]{fig/Ex1C/Ex1-3}
 
   \bibliography{book.bib,packages.bib}
 
