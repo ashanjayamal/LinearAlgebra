@@ -15,7 +15,7 @@ github-repo: rstudio/bookdown-demo
 ---
 
 # Vector space
-## a
+## R^n and C^n
 $\mathbb{R}^n$ and $\mathbb{C}^n$
 
 
@@ -139,8 +139,7 @@ Lists differ from sets in two ways: in lists, order matters and repetitions have
 - The lists $(4, 4)$ and $(4, 4, 4)$ are not equal (they do not have the same length), although the sets $\{4, 4\}$ and $\{4, 4, 4\}$ both equal the set $\{4\}$.
 
 ```
-### Fn
-
+### F^n
 $\mathbb{F}^n$
 Fix a positive integer $\mathbb{F}^n$ for the rest of this chapter.
 
@@ -183,6 +182,58 @@ a+b
 
 where the second and fourth equalities above hold because of the definition of addition in $\mathbb{F}^n$ and the third equality holds because of the usual commutativity of addition in $\mathbb{F}$.
 ```
+
+If a single letter is used to denote an element of \(F^n\), then the same letter with appropriate subscripts is often used when coordinates must be displayed. \
+For example, if \(x \in F^n\), then letting \[x=(x_1, \ldots, x_n)\] is good notation, as shown in the proof above. Even better, work with just \(x\) and avoid explicit coordinates when possible. 
+
+**Notation**: $0$\
+Let \(0\) denote the list of length \(n\) whose coordinates are all \(0\):
+\[ 0 = (0, \ldots, 0) \]
+
+Here we are using the symbol \(0\) in two different ways—on the left side of the equation above, the symbol \(0\) denotes a list of length \(n\), which is an element of \(0\), whereas on the right side, each \(0\) denotes a number. This potentially confusing practice actually causes no problems because the context should always make clear which \(0\) is intended. 
+
+```{r echo=FALSE}
+  knitr::include_graphics('fig/Chapter-1/fig1.png') 
+```
+
+```{example,name='Context determines which 0 is intended'}
+Consider the statement that \(0\) is an additive identity for \(F^n\):
+
+\[ x + 0 = x \quad \text{for all } x \in F^n. \]
+
+Here, the \(0\) above refers to the list defined earlier, not the number \(0\), because we have not defined the sum of an element of \(F^n\) (namely, \(x\)) and the number \(0\). 
+```
+
+```{r echo=FALSE}
+  knitr::include_graphics('fig/Chapter-1/fig2.png') 
+```
+
+A picture can aid our intuition. We will draw pictures in \(\mathbb{R}^2\) because we can sketch this space on two-dimensional surfaces such as paper and computer screens. A typical element of \(\mathbb{R}^2\) is a point \(\mathbf{v} = (a, b)\). Sometimes we think of \(\mathbf{v}\) not as a point but as an arrow starting at the origin and ending at \((a, b)\), as shown here. When we think of an element of \(\mathbb{R}^2\) as an arrow, we refer to it as a vector.
+
+```{r echo=FALSE}
+  knitr::include_graphics('fig/Chapter-1/fig3.png') 
+```
+
+```{example}
+$v_1:=(2,1),v_2:=(3,4)\in \mathbb{R}^2$ can be present as follows,
+```
+
+```{r echo=FALSE,fig.cap='Elements of R2 can be thought of as points or as vectors.'}
+  knitr::include_graphics('fig/Chapter-1/fig4.png') 
+```
+
+When we think of vectors in \(\mathbb{R}^2\) as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you'll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Definition of Vector space

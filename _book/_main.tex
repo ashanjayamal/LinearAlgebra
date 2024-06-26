@@ -80,7 +80,7 @@
 
 \title{Linear Algebra}
 \author{Ashan Jayamal}
-\date{2024-06-24}
+\date{2024-06-26}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -108,7 +108,7 @@
 }
 \chapter{Vector space}\label{vector-space}
 
-\section{a}\label{a}
+\section{R\^{}n and C\^{}n}\label{rn-and-cn}
 
 \(\mathbb{R}^n\) and \(\mathbb{C}^n\)
 
@@ -294,7 +294,7 @@ Lists differ from sets in two ways: in lists, order matters and repetitions have
 
 \end{proposition}
 
-\subsection{Fn}\label{fn}
+\subsection{F\^{}n}\label{fn}
 
 \(\mathbb{F}^n\)
 Fix a positive integer \(\mathbb{F}^n\) for the rest of this chapter.
@@ -341,12 +341,47 @@ a+b
 where the second and fourth equalities above hold because of the definition of addition in \(\mathbb{F}^n\) and the third equality holds because of the usual commutativity of addition in \(\mathbb{F}\).
 \end{proof}
 
+If a single letter is used to denote an element of \(F^n\), then the same letter with appropriate subscripts is often used when coordinates must be displayed.\\
+For example, if \(x \in F^n\), then letting \[x=(x_1, \ldots, x_n)\] is good notation, as shown in the proof above. Even better, work with just \(x\) and avoid explicit coordinates when possible.
+
+\textbf{Notation}: \(0\)\\
+Let \(0\) denote the list of length \(n\) whose coordinates are all \(0\):
+\[ 0 = (0, \ldots, 0) \]
+
+Here we are using the symbol \(0\) in two different ways---on the left side of the equation above, the symbol \(0\) denotes a list of length \(n\), which is an element of \(0\), whereas on the right side, each \(0\) denotes a number. This potentially confusing practice actually causes no problems because the context should always make clear which \(0\) is intended.
+
+\includegraphics[width=13.08in]{fig/Chapter-1/fig1}
+
+\begin{example}[Context determines which 0 is intended]
+\protect\hypertarget{exm:unnamed-chunk-15}{}\label{exm:unnamed-chunk-15}Consider the statement that \(0\) is an additive identity for \(F^n\):
+
+\[ x + 0 = x \quad \text{for all } x \in F^n. \]
+
+Here, the \(0\) above refers to the list defined earlier, not the number \(0\), because we have not defined the sum of an element of \(F^n\) (namely, \(x\)) and the number \(0\).
+\end{example}
+
+\includegraphics[width=21in]{fig/Chapter-1/fig2}
+
+A picture can aid our intuition. We will draw pictures in \(\mathbb{R}^2\) because we can sketch this space on two-dimensional surfaces such as paper and computer screens. A typical element of \(\mathbb{R}^2\) is a point \(\mathbf{v} = (a, b)\). Sometimes we think of \(\mathbf{v}\) not as a point but as an arrow starting at the origin and ending at \((a, b)\), as shown here. When we think of an element of \(\mathbb{R}^2\) as an arrow, we refer to it as a vector.
+
+\includegraphics[width=12.75in]{fig/Chapter-1/fig3}
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-18}{}\label{exm:unnamed-chunk-18}\(v_1:=(2,1),v_2:=(3,4)\in \mathbb{R}^2\) can be present as follows,
+\end{example}
+
+\begin{figure}
+\includegraphics[width=16.74in]{fig/Chapter-1/fig4} \caption{Elements of R2 can be thought of as points or as vectors.}\label{fig:unnamed-chunk-19}
+\end{figure}
+
+When we think of vectors in \(\mathbb{R}^2\) as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you'll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.
+
 \section{Definition of Vector space}\label{definition-of-vector-space}
 
 We will define a vector space to be a set \(V\)with an addition and a scalar multiplication on \(V\) that satisfy the properties in the paragraph above.
 
 \begin{definition}[addition, scalar multiplication]
-\protect\hypertarget{def:unnamed-chunk-14}{}\label{def:unnamed-chunk-14}\leavevmode
+\protect\hypertarget{def:unnamed-chunk-20}{}\label{def:unnamed-chunk-20}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -361,7 +396,7 @@ We will define a vector space to be a set \(V\)with an addition and a scalar mul
 Now we are ready to give the formal definition of a vector space
 
 \begin{definition}[Vector Space]
-\protect\hypertarget{def:unnamed-chunk-15}{}\label{def:unnamed-chunk-15}
+\protect\hypertarget{def:unnamed-chunk-21}{}\label{def:unnamed-chunk-21}
 
 A vector space is a set \(V\) along with an addition on \(V\) and a scalar multiplication on \(V\) such that the following properties hold.
 
@@ -386,18 +421,18 @@ A vector space is a set \(V\) along with an addition on \(V\) and a scalar multi
 The following geometric language sometimes aids our intuition.
 
 \begin{definition}[Vector]
-\protect\hypertarget{def:unnamed-chunk-16}{}\label{def:unnamed-chunk-16}Elements of a vector space are called vectors or points.
+\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}Elements of a vector space are called vectors or points.
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-17}{}\label{exm:unnamed-chunk-17}The simplest vector space is \{0\}, which contains only one point.
+\protect\hypertarget{exm:unnamed-chunk-23}{}\label{exm:unnamed-chunk-23}The simplest vector space is \{0\}, which contains only one point.
 \end{example}
 
 The scalar multiplication in a vector space depends on \(F\).
 Thus when we need to be precise, we will say that \(V\) is a vector space over \(F\) instead of saying simply that \(V\) is a vector space.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-18}{}\label{exm:unnamed-chunk-18}\leavevmode
+\protect\hypertarget{exm:unnamed-chunk-24}{}\label{exm:unnamed-chunk-24}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -412,7 +447,7 @@ Thus when we need to be precise, we will say that \(V\) is a vector space over \
 Usually the choice of \(F\) is either clear from the context or irrelevant. Thus we often assume that \(F\) is lurking in the background without specifically mentioning it. With the usual operations of addition and scalar multiplication, \(F^n\) is a vector space over \(F\), as you should verify. The example of \(F^n\) motivated our definition of vector space.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-19}{}\label{exm:unnamed-chunk-19}\(F^\infty\) is defined to be the set of all sequences of elements of \(F\):
+\protect\hypertarget{exm:unnamed-chunk-25}{}\label{exm:unnamed-chunk-25}\(F^\infty\) is defined to be the set of all sequences of elements of \(F\):
 \[F^\infty = \{(f_1, f_2, \ldots) \mid f_i \in F \text{ for } i = 1, 2, \ldots\}.\]
 
 Addition and scalar multiplication on \(F^\infty\) are defined as expected:
@@ -448,7 +483,7 @@ be lists, functions, or weird objects.
 Now let's verify following example
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-20}{}\label{exm:unnamed-chunk-20}
+\protect\hypertarget{exm:unnamed-chunk-26}{}\label{exm:unnamed-chunk-26}
 
 \textbf{\(F^S\) is a vector space}
 
@@ -509,7 +544,7 @@ In other words, we can think of \(F^n\) as \(F^{\{1,2,\ldots,n\}}\).
 Similarly, we can think of \(F^\infty\) as \(F^{\{1,2,\ldots\}}\).
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-22}{}\label{prp:unnamed-chunk-22}A vector space has a unique additive identity.
+\protect\hypertarget{prp:unnamed-chunk-28}{}\label{prp:unnamed-chunk-28}A vector space has a unique additive identity.
 \end{proposition}
 
 \begin{proof}
@@ -522,7 +557,7 @@ Thus \(0 ′ = 0\), proving that \(V\) has only one additive identity.
 \end{proof}
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-24}{}\label{prp:unnamed-chunk-24}Every element in a vector space has a unique additive inverse.
+\protect\hypertarget{prp:unnamed-chunk-30}{}\label{prp:unnamed-chunk-30}Every element in a vector space has a unique additive inverse.
 \end{proposition}
 
 \begin{proof}
@@ -758,7 +793,62 @@ The only part of the defnition of a vector space that connects vector addition a
 
 \includegraphics[width=9.12in]{fig/Ex1C/Ex1-2}
 
-\includegraphics[width=8.89in]{fig/Ex1C/Ex1-3}
+\includegraphics[width=14.06in]{fig/Ex1C/Ex1-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+\end{enumerate}
+
+\textbf{Statement 1}: If \(b\in \mathbb{F}\), then
+\[\left\{(x_1,x_2,x_3,x_4)\in \mathbb{F}^4:x_3=5x_4+b\right\}\]
+is a subspace of \(\mathbb{F}^4\) if and only if \(b = 0\).
+
+\emph{Proof of Statement 1}
+
+\includegraphics[width=9.96in]{fig/Ex1C/Ex2-a-1}
+
+\includegraphics[width=8.01in]{fig/Ex1C/Ex2-a-2}
+
+\textbf{Statement 2} : The set of continuous real-valued functions on the interval \([0, 1]\) is a subspace of \(\mathbb{R}^[0,1]\)
+
+\emph{Proof of statement 2}:
+
+\includegraphics[width=15.81in]{fig/Ex1C/Ex2-1}
+
+\includegraphics[width=12.39in]{fig/Ex1C/Ex2-2}
+
+\includegraphics[width=9.39in]{fig/Ex1C/Ex2-3}
+
+\includegraphics[width=9.68in]{fig/Ex1C/Ex2-4}
+
+\textbf{Statement 3} : The set of differentiable real-valued functions on \(\mathbb{R}\) is a subspace of \(\mathbb{R}^{\mathbb{R}}\).
+
+\emph{Proof of Statement 3}
+
+\includegraphics[width=19.4in]{fig/Ex1C/Ex2-c}
+\textbf{Statement 4} : The set of differentiable real-valued functions \(\mathbb{R}\) on the interval (0, 3) such that \(f'(2)=b\) is a subspace of \(\mathbb{R}^{(0,3)}\) if and only if \(b = 0\).
+
+\emph{Proof of Statement 4}
+
+\includegraphics[width=9.03in]{fig/Ex1C/Ex2-d}
+
+\textbf{Statement 5} : The set of all sequences of complex numbers with limit \(0\) is a subspace of \(\mathbb{C}^{\infty}\)
+
+\emph{Proof of Statement 5}:
+
+\includegraphics[width=12.33in]{fig/Ex1C/Ex2-e}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+\end{enumerate}
+
+\includegraphics[width=9.62in]{fig/Ex1C/Ex3}
 
   \bibliography{book.bib,packages.bib}
 
