@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal" />
 
 
-<meta name="date" content="2024-05-29" />
+<meta name="date" content="2024-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-<link rel="next" href="exercise-1a.html"/>
+<link rel="next" href="exercise1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -78,13 +78,19 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Vector space</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#a"><i class="fa fa-check"></i><b>1.1</b> a</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#rn-and-cn"><i class="fa fa-check"></i><b>1.1</b> R^n and C^n</a>
 <ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#lists"><i class="fa fa-check"></i><b>1.1.1</b> Lists</a></li>
-<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#fn"><i class="fa fa-check"></i><b>1.1.2</b> Fn</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#fn"><i class="fa fa-check"></i><b>1.1.2</b> F^n</a></li>
 </ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#definition-of-vector-space"><i class="fa fa-check"></i><b>1.2</b> Definition of Vector space</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="exercise-1a.html"><a href="exercise-1a.html"><i class="fa fa-check"></i><b>2</b> Exercise 1A</a></li>
+<li class="chapter" data-level="2" data-path="exercise1.html"><a href="exercise1.html"><i class="fa fa-check"></i><b>2</b> Exercise1</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="exercise1.html"><a href="exercise1.html#exercise-1a"><i class="fa fa-check"></i><b>2.1</b> Exercise 1A</a></li>
+<li class="chapter" data-level="2.2" data-path="exercise1.html"><a href="exercise1.html#exercise-1b"><i class="fa fa-check"></i><b>2.2</b> Exercise 1B</a></li>
+<li class="chapter" data-level="2.3" data-path="exercise1.html"><a href="exercise1.html#exercise-1c"><i class="fa fa-check"></i><b>2.3</b> Exercise 1C</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages/" target="blank">Ashan Jayamal</a></li>
 
@@ -108,12 +114,12 @@
 <div id="header">
 <h1 class="title">Linear Algebra</h1>
 <p class="author"><em>Ashan Jayamal</em></p>
-<p class="date"><em>2024-05-29</em></p>
+<p class="date"><em>2024-06-26</em></p>
 </div>
 <div id="vector-space" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Vector space<a href="index.html#vector-space" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="a" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> a<a href="index.html#a" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rn-and-cn" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> R^n and C^n<a href="index.html#rn-and-cn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><span class="math inline">\(\mathbb{R}^n\)</span> and <span class="math inline">\(\mathbb{C}^n\)</span></p>
 <p>We are already be familiar with basic properties of the set of real numbers(<span class="math inline">\(\mathbb{R}\)</span>). Complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of <span class="math inline">\(−1\)</span>, denoted by <span class="math inline">\(i\)</span> that obeys the usual rules of arithmetic. Here are the formal definition.</p>
 <div class="definition">
@@ -221,7 +227,7 @@ for all <span class="math inline">\(\alpha\beta\in \mathbb{F}\)</span> and all p
 </div>
 </div>
 <div id="fn" class="section level3 hasAnchor" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> Fn<a href="index.html#fn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3><span class="header-section-number">1.1.2</span> F^n<a href="index.html#fn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math inline">\(\mathbb{F}^n\)</span>
 Fix a positive integer <span class="math inline">\(\mathbb{F}^n\)</span> for the rest of this chapter.</p>
 <div class="definition">
@@ -256,8 +262,169 @@ a+b
 \end{eqnarray}\]</span></p>
 <p>where the second and fourth equalities above hold because of the definition of addition in <span class="math inline">\(\mathbb{F}^n\)</span> and the third equality holds because of the usual commutativity of addition in <span class="math inline">\(\mathbb{F}\)</span>.</p>
 </div>
-
+<p>If a single letter is used to denote an element of <span class="math inline">\(F^n\)</span>, then the same letter with appropriate subscripts is often used when coordinates must be displayed.<br />
+For example, if <span class="math inline">\(x \in F^n\)</span>, then letting <span class="math display">\[x=(x_1, \ldots, x_n)\]</span> is good notation, as shown in the proof above. Even better, work with just <span class="math inline">\(x\)</span> and avoid explicit coordinates when possible.</p>
+<p><strong>Notation</strong>: <span class="math inline">\(0\)</span><br />
+Let <span class="math inline">\(0\)</span> denote the list of length <span class="math inline">\(n\)</span> whose coordinates are all <span class="math inline">\(0\)</span>:
+<span class="math display">\[ 0 = (0, \ldots, 0) \]</span></p>
+<p>Here we are using the symbol <span class="math inline">\(0\)</span> in two different ways—on the left side of the equation above, the symbol <span class="math inline">\(0\)</span> denotes a list of length <span class="math inline">\(n\)</span>, which is an element of <span class="math inline">\(0\)</span>, whereas on the right side, each <span class="math inline">\(0\)</span> denotes a number. This potentially confusing practice actually causes no problems because the context should always make clear which <span class="math inline">\(0\)</span> is intended.</p>
+<p><img src="fig/Chapter-1/fig1.png" width="471" /></p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-15" class="example"><strong>Example 1.4  (Context determines which 0 is intended) </strong></span>Consider the statement that <span class="math inline">\(0\)</span> is an additive identity for <span class="math inline">\(F^n\)</span>:</p>
+<p><span class="math display">\[ x + 0 = x \quad \text{for all } x \in F^n. \]</span></p>
+<p>Here, the <span class="math inline">\(0\)</span> above refers to the list defined earlier, not the number <span class="math inline">\(0\)</span>, because we have not defined the sum of an element of <span class="math inline">\(F^n\)</span> (namely, <span class="math inline">\(x\)</span>) and the number <span class="math inline">\(0\)</span>.</p>
 </div>
+<p><img src="fig/Chapter-1/fig2.png" width="756" /></p>
+<p>A picture can aid our intuition. We will draw pictures in <span class="math inline">\(\mathbb{R}^2\)</span> because we can sketch this space on two-dimensional surfaces such as paper and computer screens. A typical element of <span class="math inline">\(\mathbb{R}^2\)</span> is a point <span class="math inline">\(\mathbf{v} = (a, b)\)</span>. Sometimes we think of <span class="math inline">\(\mathbf{v}\)</span> not as a point but as an arrow starting at the origin and ending at <span class="math inline">\((a, b)\)</span>, as shown here. When we think of an element of <span class="math inline">\(\mathbb{R}^2\)</span> as an arrow, we refer to it as a vector.</p>
+<p><img src="fig/Chapter-1/fig3.png" width="459" /></p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-18" class="example"><strong>Example 1.5  </strong></span><span class="math inline">\(v_1:=(2,1),v_2:=(3,4)\in \mathbb{R}^2\)</span> can be present as follows,</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<img src="fig/Chapter-1/fig4.png" alt="Elements of R2 can be thought of as points or as vectors." width="602" />
+<p class="caption">
+Figure 1.1: Elements of R2 can be thought of as points or as vectors.
+</p>
+</div>
+<p>When we think of vectors in <span class="math inline">\(\mathbb{R}^2\)</span> as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you’ll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.</p>
+</div>
+</div>
+<div id="definition-of-vector-space" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Definition of Vector space<a href="index.html#definition-of-vector-space" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will define a vector space to be a set <span class="math inline">\(V\)</span>with an addition and a scalar multiplication on <span class="math inline">\(V\)</span> that satisfy the properties in the paragraph above.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-20" class="definition"><strong>Definition 1.6  (addition, scalar multiplication) </strong></span></p>
+<ul>
+<li>An addition on set <span class="math inline">\(V\)</span> is a function that assigns an element <span class="math inline">\(u+v\in V ~~~ u,v,\in V\)</span> .</li>
+<li>A scalar multiplication on a set <span class="math inline">\(V\)</span>is a function that assigns an element <span class="math inline">\(\lambda v \in V\)</span> to each <span class="math inline">\(\lambda\in F\)</span> and each <span class="math inline">\(v \in V\)</span></li>
+</ul>
+</div>
+<p>Now we are ready to give the formal definition of a vector space</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-21" class="definition"><strong>Definition 1.7  (Vector Space) </strong></span>A vector space is a set <span class="math inline">\(V\)</span> along with an addition on <span class="math inline">\(V\)</span> and a scalar multiplication on <span class="math inline">\(V\)</span> such that the following properties hold.</p>
+<ul>
+<li><strong>Commutativity</strong>: <span class="math inline">\(u + v = v + u\)</span> for all <span class="math inline">\(u, v \in V\)</span>.</li>
+<li><strong>Associativity</strong>: <span class="math inline">\((u + v) + w = u + (v + w)\)</span> and <span class="math inline">\((ab)c = a(bc)\)</span> for all <span class="math inline">\(u, v, w \in V\)</span> and for all <span class="math inline">\(a, b \in \mathbb{F}\)</span>.</li>
+<li><strong>Additive Identity</strong>: There exists an element <span class="math inline">\(0 \in V\)</span> such that <span class="math inline">\(v + 0 = v\)</span> for all <span class="math inline">\(v \in V\)</span>.</li>
+<li><strong>Additive Inverse</strong>: For every <span class="math inline">\(v \in V\)</span>, there exists <span class="math inline">\(-v \in V\)</span> such that <span class="math inline">\(v + (-v) = 0\)</span>.</li>
+<li><strong>Multiplicative Identity</strong>: <span class="math inline">\(1v = v\)</span> for all <span class="math inline">\(v \in V\)</span>.</li>
+<li><strong>Distributive Properties</strong>: <span class="math inline">\(a(v + w) = av + aw\)</span> and <span class="math inline">\((a + b)v = av + bv\)</span> for all <span class="math inline">\(v, w \in V\)</span> and all <span class="math inline">\(a, b \in \mathbb{F}\)</span>.</li>
+</ul>
+</div>
+<p>The following geometric language sometimes aids our intuition.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 1.8  (Vector) </strong></span>Elements of a vector space are called vectors or points.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-23" class="example"><strong>Example 1.6  </strong></span>The simplest vector space is {0}, which contains only one point.</p>
+</div>
+<p>The scalar multiplication in a vector space depends on <span class="math inline">\(F\)</span>.
+Thus when we need to be precise, we will say that <span class="math inline">\(V\)</span> is a vector space over <span class="math inline">\(F\)</span> instead of saying simply that <span class="math inline">\(V\)</span> is a vector space.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-24" class="example"><strong>Example 1.7  </strong></span></p>
+<ul>
+<li><span class="math inline">\(\mathbb{R}^n\)</span> is a vector space over <span class="math inline">\(\mathbb{R}\)</span></li>
+<li><span class="math inline">\(\mathbb{C}^n\)</span> is a vector space over <span class="math inline">\(\mathbb{C}\)</span>.</li>
+</ul>
+</div>
+<p>Usually the choice of <span class="math inline">\(F\)</span> is either clear from the context or irrelevant. Thus we often assume that <span class="math inline">\(F\)</span> is lurking in the background without specifically mentioning it. With the usual operations of addition and scalar multiplication, <span class="math inline">\(F^n\)</span> is a vector space over <span class="math inline">\(F\)</span>, as you should verify. The example of <span class="math inline">\(F^n\)</span> motivated our definition of vector space.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 1.8  </strong></span><span class="math inline">\(F^\infty\)</span> is defined to be the set of all sequences of elements of <span class="math inline">\(F\)</span>:
+<span class="math display">\[F^\infty = \{(f_1, f_2, \ldots) \mid f_i \in F \text{ for } i = 1, 2, \ldots\}.\]</span></p>
+<p>Addition and scalar multiplication on <span class="math inline">\(F^\infty\)</span> are defined as expected:
+<span class="math display">\[\begin{eqnarray*}
+(f_1, f_2, \ldots) + (g_1, g_2, \ldots) &amp;=&amp; (f_1 + g_1, f_2 + g_2, \ldots)\\
+\lambda(f_1, f_2, \ldots) &amp;=&amp; (cf_1, cf_2, \ldots).
+\end{eqnarray*}\]</span>
+With these definitions, <span class="math inline">\(F^\infty\)</span> becomes a vector space over <span class="math inline">\(F\)</span>, as you should verify.
+The additive identity in this vector space is the sequence of all 0’s.</p>
+</div>
+<p>Our next example of a vector space involves a set of functions.</p>
+<p><strong>Notation</strong>:<span class="math inline">\(F^S\)</span></p>
+<ul>
+<li>If <span class="math inline">\(S\)</span> is a set, then <span class="math inline">\(F^S\)</span> denotes the set of functions from <span class="math inline">\(S\)</span> to <span class="math inline">\(F\)</span>.</li>
+<li>For <span class="math inline">\(f,g \in F^S\)</span>, the sum <span class="math inline">\(f + g \in F^S\)</span> is the function defined by <span class="math inline">\((f + g)(s) = f(s) + g(s)\)</span> for all <span class="math inline">\(s \in S\)</span>.</li>
+<li>For <span class="math inline">\(\lambda \in F\)</span> and <span class="math inline">\(f \in F^S\)</span>, the product <span class="math inline">\(\lambda f \in F^S\)</span> is the function defined by <span class="math inline">\((\lambda f)(s) = \lambda f(s)\)</span> for all <span class="math inline">\(s \in S\)</span>.</li>
+</ul>
+<p><strong>Remark</strong>: As an example of the notation above, if <span class="math inline">\(S\)</span> is the interval <span class="math inline">\([0, 1]\)</span> and <span class="math inline">\(F=\mathbb{R}\)</span>, then <span class="math inline">\(\mathbb{R}^{[0,1]}\)</span> is the set of real-valued functions on the interval [0, 1]
+The elements of the vector space <span class="math inline">\(\mathbb{R}^{[0,1]}\)</span>
+are real-valued functions on <span class="math inline">\([0, 1]\)</span>, not
+lists. In general, a vector space is an
+abstract entity whose elements might
+be lists, functions, or weird objects.</p>
+<p>Now let’s verify following example</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-26" class="example"><strong>Example 1.9  </strong></span><strong><span class="math inline">\(F^S\)</span> is a vector space</strong></p>
+<ul>
+<li>If <span class="math inline">\(S\)</span> is a nonempty set, then <span class="math inline">\(F^S\)</span> (with the operations of addition and scalar multiplication as defined above) is a vector space over <span class="math inline">\(F\)</span>.</li>
+<li>The additive identity of <span class="math inline">\(F^S\)</span> is the function <span class="math inline">\(0 \colon S \rightarrow F\)</span> defined by <span class="math inline">\(0(s) = 0\)</span> for all <span class="math inline">\(s \in S\)</span>.</li>
+<li>For <span class="math inline">\(f \in F^S\)</span>, the additive inverse of <span class="math inline">\(-f\)</span> is the function <span class="math inline">\(-f \colon S \rightarrow F\)</span> defined by <span class="math inline">\((-f)(s) = -f(s)\)</span> for all <span class="math inline">\(s \in S\)</span>.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(S\)</span> be an set non empty set and let <span class="math inline">\(f,g,h \in \mathbb{F}^S\)</span>. Let <span class="math inline">\(x\in S\)</span>. Let <span class="math inline">\(a,b\in \mathbb{F}\)</span>.</p>
+<ul>
+<li><strong>Commutataive</strong>: <span class="math inline">\([f+g](x)=f(x)+g(x)=g(x)+f(x)=[g+f](x)\)</span> . (Since <span class="math inline">\(f(x),g(x)\in \mathbb{F}\)</span> and <span class="math inline">\(\mathbb{F}\)</span> have comutataive property.)Thus <span class="math inline">\(f+g=g+f\)</span> for all <span class="math inline">\(f,g\in \mathbb{F}\)</span></li>
+<li><strong>Associativity</strong>:
+<ul>
+<li><span class="math inline">\([(f+g)+h](x)=(f(x)+g(x))+h(x)=f(x)+(g(x)+h(x))=[f+(g+h)](x)\)</span>.(Since <span class="math inline">\(f(x),g(x),h(x)\in \mathbb{F}\)</span> and <span class="math inline">\(\mathbb{F}\)</span> have associavity property.)</li>
+<li><span class="math inline">\([(a\cdot b)\cdot f](x)=(a\cdot b)\cdot (f(x))=a\cdot (b\cdot f(x))=[a\cdot (b\cdot f)](x)\)</span>
+(Since <span class="math inline">\(f(x)a,b\in \mathbb{F}\)</span> and <span class="math inline">\(\mathbb{F}\)</span> have associavity property.</li>
+</ul></li>
+<li><strong>Aadditive Identity</strong>: Let <span class="math inline">\(0\)</span> be zero function <span class="math inline">\(0 \colon S \rightarrow F\)</span> defined by <span class="math inline">\(0(s) = 0\)</span> for all <span class="math inline">\(s \in S\)</span>. Then, <span class="math inline">\([f+0](x)=f(x)+0(x)=f(x)+0=f(x)\)</span>.Thus, <span class="math inline">\(f+0=f\)</span> for all <span class="math inline">\(f\in F^S\)</span>.</li>
+<li><strong>Addtive Identity</strong>: For <span class="math inline">\(f \in F^S\)</span>, the additive inverse of <span class="math inline">\(-f\)</span> is the function <span class="math inline">\(-f \colon S \rightarrow F\)</span> defined by <span class="math inline">\((-f)(s) = -f(s)\)</span> for all <span class="math inline">\(s \in S\)</span>.
+Then <span class="math inline">\([f+(-f)](x)=f(x)+(-f)(x)=f(x)-f(x)=0=0(x)\)</span>. Thus. <span class="math inline">\(f+0=f\)</span>, for all <span class="math inline">\(f\in F^S\)</span>.</li>
+<li><strong>Multiplicative Identity</strong>: <span class="math inline">\([1\cdot f](x)=1\cdot(f(x))=f(x)\)</span>. Thus, <span class="math inline">\(1f=f\)</span> for all <span class="math inline">\(f\in F^S\)</span>.</li>
+<li><strong>Distributive Property</strong>:
+<ul>
+<li><span class="math inline">\([a(f+g)](x)=a\cdot ((f+g(x)))=a(f(x)+g(x))=af(x)+ag(x)=[af](x)+[ag](x)=[af+ag](x)\)</span>.(Since <span class="math inline">\(f(x),g(x),a\in \mathbb{F}\)</span> and <span class="math inline">\(\mathbb{F}\)</span> have distributive property. Thus, <span class="math inline">\(a(f+g)=af+ag\)</span> for all <span class="math inline">\(f,g\in F^S\)</span> and <span class="math inline">\(a\in F\)</span>.</li>
+<li><span class="math inline">\([(a+b)f](x)=(a+b)((f(x)))=a(f(x))+b(f(x))=[af](x)+[bf](x)=[af+bf](x)\)</span>.(Since <span class="math inline">\(f(x)a,b\in \mathbb{F}\)</span> and <span class="math inline">\(\mathbb{F}\)</span> have distributive property. Thus, <span class="math inline">\((a+b)f=af+bf\)</span> for all <span class="math inline">\(f\in F^S\)</span> and <span class="math inline">\(a,b\in F\)</span></li>
+</ul></li>
+</ul>
+</div>
+<p>The vector space <span class="math inline">\(F^n\)</span> is a special case of the vector space <span class="math inline">\(F^S\)</span> because each <span class="math inline">\((x_1, \ldots, x_n) \in F^n\)</span> can be thought of as a function <span class="math inline">\(x\)</span> from the set <span class="math inline">\(\{1, 2, \ldots, n\}\)</span> to <span class="math inline">\(F\)</span> by writing <span class="math inline">\(x(k)\)</span> instead of <span class="math inline">\(x_k\)</span> for the <span class="math inline">\(k^{th}\)</span> coordinate of <span class="math inline">\((x_1, \ldots, x_n)\)</span>.
+In other words, we can think of <span class="math inline">\(F^n\)</span> as <span class="math inline">\(F^{\{1,2,\ldots,n\}}\)</span>.
+Similarly, we can think of <span class="math inline">\(F^\infty\)</span> as <span class="math inline">\(F^{\{1,2,\ldots\}}\)</span>.</p>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-28" class="proposition"><strong>Proposition 1.4  </strong></span>A vector space has a unique additive identity.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span>Suppose <span class="math inline">\(0\)</span> and <span class="math inline">\(0&#39;\)</span> are both additive identities for some vector space <span class="math inline">\(V\)</span>.
+Then,
+<span class="math display">\[0′ = 0′ + 0 = 0 + 0′ = 0,\]</span>
+where the frst equality holds because <span class="math inline">\(0\)</span> is an additive identity, the second equality
+comes from commutativity, and the third equality holds because <span class="math inline">\(0′\)</span> is an additive identity.
+Thus <span class="math inline">\(0 ′ = 0\)</span>, proving that <span class="math inline">\(V\)</span> has only one additive identity.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-30" class="proposition"><strong>Proposition 1.5  </strong></span>Every element in a vector space has a unique additive inverse.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>Suppose <span class="math inline">\(V\)</span> is a vector space. Let <span class="math inline">\(v \in V\)</span>. Suppose <span class="math inline">\(w\)</span> and <span class="math inline">\(w&#39;\)</span> are additive inverses of <span class="math inline">\(v\)</span>. Then
+<span class="math display">\[ w = w + 0 = w + (v + w&#39;) = (w + v) + w&#39; = 0 + w&#39; = w&#39;. \]</span>
+Thus <span class="math inline">\(w = w&#39;\)</span>, as desired.</p>
+</div>
+<p><strong>Notations</strong>: <span class="math inline">\(-v\)</span>, <span class="math inline">\(w - v\)</span><br />
+Let <span class="math inline">\(v \in V\)</span>. Then
+- <span class="math inline">\(-v\)</span> denotes the additive inverse of <span class="math inline">\(v\)</span>;
+- <span class="math inline">\(w - v\)</span> is defined to be <span class="math inline">\(w + (-v)\)</span>.
+```</p>
+<p>For the rest of this note, I will use follwoing noatation.
+<em>Notations</em>
+<span class="math inline">\(V\)</span> denotes a vector space over <span class="math inline">\(F\)</span>.</p>
+<div class="proposition">
+<p><span id="prp:onethirty" class="proposition"><strong>Proposition 1.6  </strong></span><span class="math display">\[0v=0 \text{ for all } v\in V\]</span>
+<span class="math inline">\(0\)</span> denotes a scalar (the number <span class="math inline">\(0 \in V\)</span>) on the left side of the
+equation and a vector (the additive identity of <span class="math inline">\(V\)</span>) on the right side of the equation.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(v\in V\)</span>.
+[0v = (0 + 0)v= 0v + 0v]
+Adding the additive inverse of <span class="math inline">\(0v\)</span> to both sides of the equation above gives <span class="math inline">\(0 =0v\)</span>,as we want</p>
+</div>
+<p>The result in proposition <a href="index.html#prp:onethirty">1.6</a> involves the additive identity of <span class="math inline">\(V\)</span> and scalar multiplication.
+The only part of the defnition of a vector space that connects vector addition and scalar multiplication is the distributive property. Thus the distributive property must be used in the proof of proposition <a href="index.html#prp:onethirty">1.6</a>.</p>
+
 </div>
 </div>
             </section>
@@ -266,7 +433,7 @@ a+b
         </div>
       </div>
 
-<a href="exercise-1a.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
