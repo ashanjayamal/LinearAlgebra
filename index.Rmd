@@ -224,6 +224,71 @@ $v_1:=(2,1),v_2:=(3,4)\in \mathbb{R}^2$ can be present as follows,
 
 When we think of vectors in \(\mathbb{R}^2\) as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you'll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.
 
+Whenever we use pictures in \(\mathbb{R}^2\) or use the somewhat vague language of points and vectors, remember that these are just aids to our understanding, not substitutes for the actual mathematics that we will develop. Although we cannot draw good pictures in high-dimensional spaces, the elements of these spaces are as rigorously defined as elements of \(\mathbb{R}^2\).
+
+```{example}
+\((2, -3, \pi, \ldots, \sqrt{2})\) is an element of \(\mathbb{R}^5\), and we may casually refer to it as a point in \(\mathbb{R}^5\) or a vector in \(\mathbb{R}^5\) without worrying about whether the geometry of \(\mathbb{R}^5\) has any physical meaning.
+```
+
+
+```{r echo=FALSE,fig.cap='A vector'}
+  knitr::include_graphics('fig/Chapter-1/fig5.png') 
+```
+
+**Fun fact**: Mathematical models of the economy
+can have thousands of variables, say 
+\(x_1, …, x_{5000} which means that we must
+work in ${\mathbb{R}}^{5000}$. Such a space cannot be
+dealt with geometrically. However, the
+algebraic approach works well. Thus
+our subject is called linear algebra.
+
+```{definition,name='Summation of two vectors'}
+We have two vectors, \( \mathbf{a} \) and \( \mathbf{b} \), in \( \mathbb{R}^2 \). We want to add them such that the initial point of \( \mathbf{b} \) coincides with the end point of \( \mathbf{a} \). The sum \( \mathbf{a} + \mathbf{b} \) equals the vector whose initial point is the same as that of \( \mathbf{a} \) and whose end point is the same as that of \( \mathbf{b} \), as shown here (red one is a+b).
+
+
+```
+
+
+#```{r echo=FALSE,fig.cap='The sum of two vectors. ' , fig.align = #'center'}
+#  knitr::include_graphics('fig/Chapter-1/fig6.gif') 
+#```
+
+```{definition,name='The additive inverse in Fn,-v'}
+A vector \( \mathbf{v} \) in \( \mathbb{F}^n \), its additive inverse, denoted by \( -\mathbf{v} \), is the vector \( -\mathbf{v} \) in \( \mathbb{F}^n \) such that:
+
+\[ \mathbf{v} + (-\mathbf{v}) = \mathbf{0} \]
+
+Therefore, if \( \mathbf{v} = (v_1, \ldots, v_n) \), then \( -\mathbf{v} = (-v_1, \ldots, -v_n) \).
+
+```
+
+Given a vector \( \mathbf{x} \) in \( \mathbb{R}^2 \), its additive inverse, denoted by \( -\mathbf{x} \), is the vector in \( \mathbb{R}^2 \) with the same length but pointing in the opposite direction. The figure illustrates this way of thinking about the additive inverse:
+
+\[ \mathbf{x} + (-\mathbf{x}) = \mathbf{0} \]
+
+As you can see, the vector labelled \( -\mathbf{x} \) has the same length as the vector labelled \( \mathbf{x} \) but points in the opposite direction.
+
+#```{r echo=FALSE,fig.cap='A vector and its additive inverse.' , #fig.align = 'center'}
+#  knitr::include_graphics('fig/Chapter-1/fig7.gif') 
+#```
+
+We've dealt with addition in \( \mathbb{F}^n \), and now we'll explore multiplication. While we could define a coordinate-wise multiplication in \( \mathbb{F}^n \), experience shows that it's not useful for our purposes. Instead, we focus on scalar multiplication, which will be central to our subject.
+
+Specifically, we need to define what it means to multiply an element of \( \mathbb{F}^n \) by a scalar from \( \mathbb{F} \). 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

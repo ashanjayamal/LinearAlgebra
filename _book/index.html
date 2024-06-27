@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal" />
 
 
-<meta name="date" content="2024-06-26" />
+<meta name="date" content="2024-06-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -114,7 +114,7 @@
 <div id="header">
 <h1 class="title">Linear Algebra</h1>
 <p class="author"><em>Ashan Jayamal</em></p>
-<p class="date"><em>2024-06-26</em></p>
+<p class="date"><em>2024-06-27</em></p>
 </div>
 <div id="vector-space" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Vector space<a href="index.html#vector-space" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -287,13 +287,45 @@ Figure 1.1: Elements of R2 can be thought of as points or as vectors.
 </p>
 </div>
 <p>When we think of vectors in <span class="math inline">\(\mathbb{R}^2\)</span> as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you’ll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.</p>
+<p>Whenever we use pictures in <span class="math inline">\(\mathbb{R}^2\)</span> or use the somewhat vague language of points and vectors, remember that these are just aids to our understanding, not substitutes for the actual mathematics that we will develop. Although we cannot draw good pictures in high-dimensional spaces, the elements of these spaces are as rigorously defined as elements of <span class="math inline">\(\mathbb{R}^2\)</span>.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-20" class="example"><strong>Example 1.6  </strong></span><span class="math inline">\((2, -3, \pi, \ldots, \sqrt{2})\)</span> is an element of <span class="math inline">\(\mathbb{R}^5\)</span>, and we may casually refer to it as a point in <span class="math inline">\(\mathbb{R}^5\)</span> or a vector in <span class="math inline">\(\mathbb{R}^5\)</span> without worrying about whether the geometry of <span class="math inline">\(\mathbb{R}^5\)</span> has any physical meaning.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-21"></span>
+<img src="fig/Chapter-1/fig5.png" alt="A vector" width="306" />
+<p class="caption">
+Figure 1.2: A vector
+</p>
+</div>
+<p><strong>Fun fact</strong>: Mathematical models of the economy
+can have thousands of variables, say
+(x_1, …, x_{5000} which means that we must
+work in <span class="math inline">\({\mathbb{R}}^{5000}\)</span>. Such a space cannot be
+dealt with geometrically. However, the
+algebraic approach works well. Thus
+our subject is called linear algebra.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 1.6  (Summation of two vectors) </strong></span>We have two vectors, <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span>, in <span class="math inline">\(\mathbb{R}^2\)</span>. We want to add them such that the initial point of <span class="math inline">\(\mathbf{b}\)</span> coincides with the end point of <span class="math inline">\(\mathbf{a}\)</span>. The sum <span class="math inline">\(\mathbf{a} + \mathbf{b}\)</span> equals the vector whose initial point is the same as that of <span class="math inline">\(\mathbf{a}\)</span> and whose end point is the same as that of <span class="math inline">\(\mathbf{b}\)</span>, as shown here (red one is a+b).</p>
+</div>
+<p>#<code>{r echo=FALSE,fig.cap='The sum of two vectors. ' , fig.align = #'center'} #  knitr::include_graphics('fig/Chapter-1/fig6.gif')  #</code></p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-23" class="definition"><strong>Definition 1.7  (The additive inverse in Fn,-v) </strong></span>A vector <span class="math inline">\(\mathbf{v}\)</span> in <span class="math inline">\(\mathbb{F}^n\)</span>, its additive inverse, denoted by <span class="math inline">\(-\mathbf{v}\)</span>, is the vector <span class="math inline">\(-\mathbf{v}\)</span> in <span class="math inline">\(\mathbb{F}^n\)</span> such that:</p>
+<p><span class="math display">\[ \mathbf{v} + (-\mathbf{v}) = \mathbf{0} \]</span></p>
+<p>Therefore, if <span class="math inline">\(\mathbf{v} = (v_1, \ldots, v_n)\)</span>, then <span class="math inline">\(-\mathbf{v} = (-v_1, \ldots, -v_n)\)</span>.</p>
+</div>
+<p>Given a vector <span class="math inline">\(\mathbf{x}\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span>, its additive inverse, denoted by <span class="math inline">\(-\mathbf{x}\)</span>, is the vector in <span class="math inline">\(\mathbb{R}^2\)</span> with the same length but pointing in the opposite direction. The figure illustrates this way of thinking about the additive inverse:</p>
+<p><span class="math display">\[ \mathbf{x} + (-\mathbf{x}) = \mathbf{0} \]</span></p>
+<p>As you can see, the vector labelled <span class="math inline">\(-\mathbf{x}\)</span> has the same length as the vector labelled <span class="math inline">\(\mathbf{x}\)</span> but points in the opposite direction.</p>
+<p>#<code>{r echo=FALSE,fig.cap='A vector and its additive inverse.' , #fig.align = 'center'} #  knitr::include_graphics('fig/Chapter-1/fig7.gif')  #</code></p>
+<p>We’ve dealt with addition in <span class="math inline">\(\mathbb{F}^n\)</span>, and now we’ll explore multiplication. While we could define a coordinate-wise multiplication in <span class="math inline">\(\mathbb{F}^n\)</span>, experience shows that it’s not useful for our purposes. Instead, we focus on scalar multiplication, which will be central to our subject.</p>
+<p>Specifically, we need to define what it means to multiply an element of <span class="math inline">\(\mathbb{F}^n\)</span> by a scalar from <span class="math inline">\(\mathbb{F}\)</span>.</p>
 </div>
 </div>
 <div id="definition-of-vector-space" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Definition of Vector space<a href="index.html#definition-of-vector-space" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will define a vector space to be a set <span class="math inline">\(V\)</span>with an addition and a scalar multiplication on <span class="math inline">\(V\)</span> that satisfy the properties in the paragraph above.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-20" class="definition"><strong>Definition 1.6  (addition, scalar multiplication) </strong></span></p>
+<p><span id="def:unnamed-chunk-24" class="definition"><strong>Definition 1.8  (addition, scalar multiplication) </strong></span></p>
 <ul>
 <li>An addition on set <span class="math inline">\(V\)</span> is a function that assigns an element <span class="math inline">\(u+v\in V ~~~ u,v,\in V\)</span> .</li>
 <li>A scalar multiplication on a set <span class="math inline">\(V\)</span>is a function that assigns an element <span class="math inline">\(\lambda v \in V\)</span> to each <span class="math inline">\(\lambda\in F\)</span> and each <span class="math inline">\(v \in V\)</span></li>
@@ -301,7 +333,7 @@ Figure 1.1: Elements of R2 can be thought of as points or as vectors.
 </div>
 <p>Now we are ready to give the formal definition of a vector space</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-21" class="definition"><strong>Definition 1.7  (Vector Space) </strong></span>A vector space is a set <span class="math inline">\(V\)</span> along with an addition on <span class="math inline">\(V\)</span> and a scalar multiplication on <span class="math inline">\(V\)</span> such that the following properties hold.</p>
+<p><span id="def:unnamed-chunk-25" class="definition"><strong>Definition 1.9  (Vector Space) </strong></span>A vector space is a set <span class="math inline">\(V\)</span> along with an addition on <span class="math inline">\(V\)</span> and a scalar multiplication on <span class="math inline">\(V\)</span> such that the following properties hold.</p>
 <ul>
 <li><strong>Commutativity</strong>: <span class="math inline">\(u + v = v + u\)</span> for all <span class="math inline">\(u, v \in V\)</span>.</li>
 <li><strong>Associativity</strong>: <span class="math inline">\((u + v) + w = u + (v + w)\)</span> and <span class="math inline">\((ab)c = a(bc)\)</span> for all <span class="math inline">\(u, v, w \in V\)</span> and for all <span class="math inline">\(a, b \in \mathbb{F}\)</span>.</li>
@@ -313,15 +345,15 @@ Figure 1.1: Elements of R2 can be thought of as points or as vectors.
 </div>
 <p>The following geometric language sometimes aids our intuition.</p>
 <div class="definition">
-<p><span id="def:unnamed-chunk-22" class="definition"><strong>Definition 1.8  (Vector) </strong></span>Elements of a vector space are called vectors or points.</p>
+<p><span id="def:unnamed-chunk-26" class="definition"><strong>Definition 1.10  (Vector) </strong></span>Elements of a vector space are called vectors or points.</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-23" class="example"><strong>Example 1.6  </strong></span>The simplest vector space is {0}, which contains only one point.</p>
+<p><span id="exm:unnamed-chunk-27" class="example"><strong>Example 1.7  </strong></span>The simplest vector space is {0}, which contains only one point.</p>
 </div>
 <p>The scalar multiplication in a vector space depends on <span class="math inline">\(F\)</span>.
 Thus when we need to be precise, we will say that <span class="math inline">\(V\)</span> is a vector space over <span class="math inline">\(F\)</span> instead of saying simply that <span class="math inline">\(V\)</span> is a vector space.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-24" class="example"><strong>Example 1.7  </strong></span></p>
+<p><span id="exm:unnamed-chunk-28" class="example"><strong>Example 1.8  </strong></span></p>
 <ul>
 <li><span class="math inline">\(\mathbb{R}^n\)</span> is a vector space over <span class="math inline">\(\mathbb{R}\)</span></li>
 <li><span class="math inline">\(\mathbb{C}^n\)</span> is a vector space over <span class="math inline">\(\mathbb{C}\)</span>.</li>
@@ -329,7 +361,7 @@ Thus when we need to be precise, we will say that <span class="math inline">\(V\
 </div>
 <p>Usually the choice of <span class="math inline">\(F\)</span> is either clear from the context or irrelevant. Thus we often assume that <span class="math inline">\(F\)</span> is lurking in the background without specifically mentioning it. With the usual operations of addition and scalar multiplication, <span class="math inline">\(F^n\)</span> is a vector space over <span class="math inline">\(F\)</span>, as you should verify. The example of <span class="math inline">\(F^n\)</span> motivated our definition of vector space.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-25" class="example"><strong>Example 1.8  </strong></span><span class="math inline">\(F^\infty\)</span> is defined to be the set of all sequences of elements of <span class="math inline">\(F\)</span>:
+<p><span id="exm:unnamed-chunk-29" class="example"><strong>Example 1.9  </strong></span><span class="math inline">\(F^\infty\)</span> is defined to be the set of all sequences of elements of <span class="math inline">\(F\)</span>:
 <span class="math display">\[F^\infty = \{(f_1, f_2, \ldots) \mid f_i \in F \text{ for } i = 1, 2, \ldots\}.\]</span></p>
 <p>Addition and scalar multiplication on <span class="math inline">\(F^\infty\)</span> are defined as expected:
 <span class="math display">\[\begin{eqnarray*}
@@ -354,7 +386,7 @@ abstract entity whose elements might
 be lists, functions, or weird objects.</p>
 <p>Now let’s verify following example</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-26" class="example"><strong>Example 1.9  </strong></span><strong><span class="math inline">\(F^S\)</span> is a vector space</strong></p>
+<p><span id="exm:unnamed-chunk-30" class="example"><strong>Example 1.10  </strong></span><strong><span class="math inline">\(F^S\)</span> is a vector space</strong></p>
 <ul>
 <li>If <span class="math inline">\(S\)</span> is a nonempty set, then <span class="math inline">\(F^S\)</span> (with the operations of addition and scalar multiplication as defined above) is a vector space over <span class="math inline">\(F\)</span>.</li>
 <li>The additive identity of <span class="math inline">\(F^S\)</span> is the function <span class="math inline">\(0 \colon S \rightarrow F\)</span> defined by <span class="math inline">\(0(s) = 0\)</span> for all <span class="math inline">\(s \in S\)</span>.</li>
@@ -386,7 +418,7 @@ Then <span class="math inline">\([f+(-f)](x)=f(x)+(-f)(x)=f(x)-f(x)=0=0(x)\)</sp
 In other words, we can think of <span class="math inline">\(F^n\)</span> as <span class="math inline">\(F^{\{1,2,\ldots,n\}}\)</span>.
 Similarly, we can think of <span class="math inline">\(F^\infty\)</span> as <span class="math inline">\(F^{\{1,2,\ldots\}}\)</span>.</p>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-28" class="proposition"><strong>Proposition 1.4  </strong></span>A vector space has a unique additive identity.</p>
+<p><span id="prp:unnamed-chunk-32" class="proposition"><strong>Proposition 1.4  </strong></span>A vector space has a unique additive identity.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span>Suppose <span class="math inline">\(0\)</span> and <span class="math inline">\(0&#39;\)</span> are both additive identities for some vector space <span class="math inline">\(V\)</span>.
@@ -397,7 +429,7 @@ comes from commutativity, and the third equality holds because <span class="math
 Thus <span class="math inline">\(0 ′ = 0\)</span>, proving that <span class="math inline">\(V\)</span> has only one additive identity.</p>
 </div>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-30" class="proposition"><strong>Proposition 1.5  </strong></span>Every element in a vector space has a unique additive inverse.</p>
+<p><span id="prp:unnamed-chunk-34" class="proposition"><strong>Proposition 1.5  </strong></span>Every element in a vector space has a unique additive inverse.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>Suppose <span class="math inline">\(V\)</span> is a vector space. Let <span class="math inline">\(v \in V\)</span>. Suppose <span class="math inline">\(w\)</span> and <span class="math inline">\(w&#39;\)</span> are additive inverses of <span class="math inline">\(v\)</span>. Then

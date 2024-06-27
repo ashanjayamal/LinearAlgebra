@@ -80,7 +80,7 @@
 
 \title{Linear Algebra}
 \author{Ashan Jayamal}
-\date{2024-06-26}
+\date{2024-06-27}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -376,12 +376,56 @@ A picture can aid our intuition. We will draw pictures in \(\mathbb{R}^2\) becau
 
 When we think of vectors in \(\mathbb{R}^2\) as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you'll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.
 
+Whenever we use pictures in \(\mathbb{R}^2\) or use the somewhat vague language of points and vectors, remember that these are just aids to our understanding, not substitutes for the actual mathematics that we will develop. Although we cannot draw good pictures in high-dimensional spaces, the elements of these spaces are as rigorously defined as elements of \(\mathbb{R}^2\).
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-20}{}\label{exm:unnamed-chunk-20}\((2, -3, \pi, \ldots, \sqrt{2})\) is an element of \(\mathbb{R}^5\), and we may casually refer to it as a point in \(\mathbb{R}^5\) or a vector in \(\mathbb{R}^5\) without worrying about whether the geometry of \(\mathbb{R}^5\) has any physical meaning.
+\end{example}
+
+\begin{figure}
+\includegraphics[width=8.5in]{fig/Chapter-1/fig5} \caption{A vector}\label{fig:unnamed-chunk-21}
+\end{figure}
+
+\textbf{Fun fact}: Mathematical models of the economy
+can have thousands of variables, say
+(x\_1, \ldots, x\_\{5000\} which means that we must
+work in \({\mathbb{R}}^{5000}\). Such a space cannot be
+dealt with geometrically. However, the
+algebraic approach works well. Thus
+our subject is called linear algebra.
+
+\begin{definition}[Summation of two vectors]
+\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}We have two vectors, \(\mathbf{a}\) and \(\mathbf{b}\), in \(\mathbb{R}^2\). We want to add them such that the initial point of \(\mathbf{b}\) coincides with the end point of \(\mathbf{a}\). The sum \(\mathbf{a} + \mathbf{b}\) equals the vector whose initial point is the same as that of \(\mathbf{a}\) and whose end point is the same as that of \(\mathbf{b}\), as shown here (red one is a+b).
+\end{definition}
+
+\#\texttt{\{r\ echo=FALSE,fig.cap=\textquotesingle{}The\ sum\ of\ two\ vectors.\ \textquotesingle{}\ ,\ fig.align\ =\ \#\textquotesingle{}center\textquotesingle{}\}\ \#\ \ knitr::include\_graphics(\textquotesingle{}fig/Chapter-1/fig6.gif\textquotesingle{})\ \ \#}
+
+\begin{definition}[The additive inverse in Fn,-v]
+\protect\hypertarget{def:unnamed-chunk-23}{}\label{def:unnamed-chunk-23}A vector \(\mathbf{v}\) in \(\mathbb{F}^n\), its additive inverse, denoted by \(-\mathbf{v}\), is the vector \(-\mathbf{v}\) in \(\mathbb{F}^n\) such that:
+
+\[ \mathbf{v} + (-\mathbf{v}) = \mathbf{0} \]
+
+Therefore, if \(\mathbf{v} = (v_1, \ldots, v_n)\), then \(-\mathbf{v} = (-v_1, \ldots, -v_n)\).
+\end{definition}
+
+Given a vector \(\mathbf{x}\) in \(\mathbb{R}^2\), its additive inverse, denoted by \(-\mathbf{x}\), is the vector in \(\mathbb{R}^2\) with the same length but pointing in the opposite direction. The figure illustrates this way of thinking about the additive inverse:
+
+\[ \mathbf{x} + (-\mathbf{x}) = \mathbf{0} \]
+
+As you can see, the vector labelled \(-\mathbf{x}\) has the same length as the vector labelled \(\mathbf{x}\) but points in the opposite direction.
+
+\#\texttt{\{r\ echo=FALSE,fig.cap=\textquotesingle{}A\ vector\ and\ its\ additive\ inverse.\textquotesingle{}\ ,\ \#fig.align\ =\ \textquotesingle{}center\textquotesingle{}\}\ \#\ \ knitr::include\_graphics(\textquotesingle{}fig/Chapter-1/fig7.gif\textquotesingle{})\ \ \#}
+
+We've dealt with addition in \(\mathbb{F}^n\), and now we'll explore multiplication. While we could define a coordinate-wise multiplication in \(\mathbb{F}^n\), experience shows that it's not useful for our purposes. Instead, we focus on scalar multiplication, which will be central to our subject.
+
+Specifically, we need to define what it means to multiply an element of \(\mathbb{F}^n\) by a scalar from \(\mathbb{F}\).
+
 \section{Definition of Vector space}\label{definition-of-vector-space}
 
 We will define a vector space to be a set \(V\)with an addition and a scalar multiplication on \(V\) that satisfy the properties in the paragraph above.
 
 \begin{definition}[addition, scalar multiplication]
-\protect\hypertarget{def:unnamed-chunk-20}{}\label{def:unnamed-chunk-20}\leavevmode
+\protect\hypertarget{def:unnamed-chunk-24}{}\label{def:unnamed-chunk-24}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -396,7 +440,7 @@ We will define a vector space to be a set \(V\)with an addition and a scalar mul
 Now we are ready to give the formal definition of a vector space
 
 \begin{definition}[Vector Space]
-\protect\hypertarget{def:unnamed-chunk-21}{}\label{def:unnamed-chunk-21}
+\protect\hypertarget{def:unnamed-chunk-25}{}\label{def:unnamed-chunk-25}
 
 A vector space is a set \(V\) along with an addition on \(V\) and a scalar multiplication on \(V\) such that the following properties hold.
 
@@ -421,18 +465,18 @@ A vector space is a set \(V\) along with an addition on \(V\) and a scalar multi
 The following geometric language sometimes aids our intuition.
 
 \begin{definition}[Vector]
-\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}Elements of a vector space are called vectors or points.
+\protect\hypertarget{def:unnamed-chunk-26}{}\label{def:unnamed-chunk-26}Elements of a vector space are called vectors or points.
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-23}{}\label{exm:unnamed-chunk-23}The simplest vector space is \{0\}, which contains only one point.
+\protect\hypertarget{exm:unnamed-chunk-27}{}\label{exm:unnamed-chunk-27}The simplest vector space is \{0\}, which contains only one point.
 \end{example}
 
 The scalar multiplication in a vector space depends on \(F\).
 Thus when we need to be precise, we will say that \(V\) is a vector space over \(F\) instead of saying simply that \(V\) is a vector space.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-24}{}\label{exm:unnamed-chunk-24}\leavevmode
+\protect\hypertarget{exm:unnamed-chunk-28}{}\label{exm:unnamed-chunk-28}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -447,7 +491,7 @@ Thus when we need to be precise, we will say that \(V\) is a vector space over \
 Usually the choice of \(F\) is either clear from the context or irrelevant. Thus we often assume that \(F\) is lurking in the background without specifically mentioning it. With the usual operations of addition and scalar multiplication, \(F^n\) is a vector space over \(F\), as you should verify. The example of \(F^n\) motivated our definition of vector space.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-25}{}\label{exm:unnamed-chunk-25}\(F^\infty\) is defined to be the set of all sequences of elements of \(F\):
+\protect\hypertarget{exm:unnamed-chunk-29}{}\label{exm:unnamed-chunk-29}\(F^\infty\) is defined to be the set of all sequences of elements of \(F\):
 \[F^\infty = \{(f_1, f_2, \ldots) \mid f_i \in F \text{ for } i = 1, 2, \ldots\}.\]
 
 Addition and scalar multiplication on \(F^\infty\) are defined as expected:
@@ -483,7 +527,7 @@ be lists, functions, or weird objects.
 Now let's verify following example
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-26}{}\label{exm:unnamed-chunk-26}
+\protect\hypertarget{exm:unnamed-chunk-30}{}\label{exm:unnamed-chunk-30}
 
 \textbf{\(F^S\) is a vector space}
 
@@ -544,7 +588,7 @@ In other words, we can think of \(F^n\) as \(F^{\{1,2,\ldots,n\}}\).
 Similarly, we can think of \(F^\infty\) as \(F^{\{1,2,\ldots\}}\).
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-28}{}\label{prp:unnamed-chunk-28}A vector space has a unique additive identity.
+\protect\hypertarget{prp:unnamed-chunk-32}{}\label{prp:unnamed-chunk-32}A vector space has a unique additive identity.
 \end{proposition}
 
 \begin{proof}
@@ -557,7 +601,7 @@ Thus \(0 ′ = 0\), proving that \(V\) has only one additive identity.
 \end{proof}
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-30}{}\label{prp:unnamed-chunk-30}Every element in a vector space has a unique additive inverse.
+\protect\hypertarget{prp:unnamed-chunk-34}{}\label{prp:unnamed-chunk-34}Every element in a vector space has a unique additive inverse.
 \end{proposition}
 
 \begin{proof}
