@@ -19,7 +19,17 @@ github-repo: rstudio/bookdown-demo
 $\mathbb{R}^n$ and $\mathbb{C}^n$
 
 
-We are already be familiar with basic properties of the set  of real numbers($\mathbb{R}$). Complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of $−1$, denoted by $i$ that obeys the usual rules of arithmetic. Here are the formal definition.
+We are already be familiar with basic properties of the set  of real numbers($\mathbb{R}$). 
+
+Some nonconstant polynomials with real coefficients have no real
+zeros. 
+
+**Example**: the equation
+\[x^2+1=0\]
+has no real solutions.
+Thus we invent a solution, called \(i\), with the property that \(i^2 = -i\).
+
+Futhur, complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of $−1$, denoted by $i$ that obeys the usual rules of arithmetic. Here are the formal definition.
 
 ```{definition,name='Complex Numbers '}
 
@@ -192,9 +202,9 @@ Let \(0\) denote the list of length \(n\) whose coordinates are all \(0\):
 
 Here we are using the symbol \(0\) in two different ways—on the left side of the equation above, the symbol \(0\) denotes a list of length \(n\), which is an element of \(0\), whereas on the right side, each \(0\) denotes a number. This potentially confusing practice actually causes no problems because the context should always make clear which \(0\) is intended. 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Chapter-1/fig1.png') 
-```
+
+![](fig/Chapter-1/fig1.png) 
+
 
 ```{example,name='Context determines which 0 is intended'}
 Consider the statement that \(0\) is an additive identity for \(F^n\):
@@ -204,23 +214,23 @@ Consider the statement that \(0\) is an additive identity for \(F^n\):
 Here, the \(0\) above refers to the list defined earlier, not the number \(0\), because we have not defined the sum of an element of \(F^n\) (namely, \(x\)) and the number \(0\). 
 ```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Chapter-1/fig2.png') 
-```
+
+  ![](fig/Chapter-1/fig2.png) 
+
 
 A picture can aid our intuition. We will draw pictures in \(\mathbb{R}^2\) because we can sketch this space on two-dimensional surfaces such as paper and computer screens. A typical element of \(\mathbb{R}^2\) is a point \(\mathbf{v} = (a, b)\). Sometimes we think of \(\mathbf{v}\) not as a point but as an arrow starting at the origin and ending at \((a, b)\), as shown here. When we think of an element of \(\mathbb{R}^2\) as an arrow, we refer to it as a vector.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Chapter-1/fig3.png') 
-```
+
+  ![](fig/Chapter-1/fig3.png) 
+
 
 ```{example}
 $v_1:=(2,1),v_2:=(3,4)\in \mathbb{R}^2$ can be present as follows,
 ```
 
-```{r echo=FALSE,fig.cap='Elements of R2 can be thought of as points or as vectors.'}
-  knitr::include_graphics('fig/Chapter-1/fig4.png') 
-```
+
+  ![](fig/Chapter-1/fig4.png) 
+
 
 When we think of vectors in \(\mathbb{R}^2\) as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you'll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.
 
@@ -231,9 +241,9 @@ Whenever we use pictures in \(\mathbb{R}^2\) or use the somewhat vague language 
 ```
 
 
-```{r echo=FALSE,fig.cap='A vector'}
-  knitr::include_graphics('fig/Chapter-1/fig5.png') 
-```
+
+![A vector](fig/Chapter-1/fig5.png) 
+
 
 **Fun fact**: Mathematical models of the economy
 can have thousands of variables, say 
@@ -250,9 +260,9 @@ We have two vectors, \( \mathbf{a} \) and \( \mathbf{b} \), in \( \mathbb{R}^2 \
 ```
 
 
-#```{r echo=FALSE,fig.cap='The sum of two vectors. ' , fig.align = #'center'}
-#  knitr::include_graphics('fig/Chapter-1/fig6.gif') 
-#```
+
+ <!---[The sum of two vectors.](fig/Chapter-1/fig6.gif) --->
+
 
 ```{definition,name='The additive inverse in Fn,-v'}
 A vector \( \mathbf{v} \) in \( \mathbb{F}^n \), its additive inverse, denoted by \( -\mathbf{v} \), is the vector \( -\mathbf{v} \) in \( \mathbb{F}^n \) such that:
@@ -269,9 +279,9 @@ Given a vector \( \mathbf{x} \) in \( \mathbb{R}^2 \), its additive inverse, den
 
 As you can see, the vector labelled \( -\mathbf{x} \) has the same length as the vector labelled \( \mathbf{x} \) but points in the opposite direction.
 
-#```{r echo=FALSE,fig.cap='A vector and its additive inverse.' , #fig.align = 'center'}
-#  knitr::include_graphics('fig/Chapter-1/fig7.gif') 
-#```
+
+ ![A vector and its additive inverse.](fig/Chapter-1/fig7.png) 
+
 
 We've dealt with addition in \( \mathbb{F}^n \), and now we'll explore multiplication. While we could define a coordinate-wise multiplication in \( \mathbb{F}^n \), experience shows that it's not useful for our purposes. Instead, we focus on scalar multiplication, which will be central to our subject.
 
@@ -303,6 +313,18 @@ Specifically, we need to define what it means to multiply an element of \( \math
 
 ## Definition of Vector space
 
+**The motivation for vector space definition**
+
+
+The motivation for the definition of a vector space comes from properties of addition and scalar multiplication in \(F^n\):
+
+- Addition is commutative, associative, and has an identity.
+- Every element has an additive inverse.
+- Scalar multiplication is associative.
+- Scalar multiplication by \(1\) acts as expected.
+- Addition and scalar multiplication are connected by distributive properties.
+
+
 We will define a vector space to be a set $V$with an addition and a scalar multiplication on $V$ that satisfy the properties in the paragraph above.
 
 ```{definition,name='addition, scalar multiplication'}
@@ -310,6 +332,15 @@ We will define a vector space to be a set $V$with an addition and a scalar multi
 - An addition on set $V$ is a function that assigns an element  $u+v\in V ~~~ u,v,\in V$ .
 - A scalar multiplication on a set $V$is a function that assigns an element $\lambda v \in V$ to each $\lambda\in F$ and each $v \in V$
 ```
+
+```{example}
+Suppose \(V\) is the set of real-valued functions on the interval \([0, l]\). For \(f,g \in V\) and \(\lambda \in R\), define \(f+ g\) and \(\lambda f\) by
+\[[f+g](x) = f (x) + g(x)\]
+and
+\[[\lambda f](x) + = \lambda f (x) \].
+Thus \(f+g \in V, \lambda f\in V\).
+```
+
 Now we are ready to give the formal definition of a vector space
 
 ```{definition,name='Vector Space'}
@@ -456,3 +487,49 @@ Adding the additive inverse of $0v$ to both sides of the equation above gives $0
 
 The result in proposition \@ref(prp:onethirty) involves the additive identity of $V$ and scalar multiplication.
 The only part of the defnition of a vector space that connects vector addition and scalar multiplication is the distributive property. Thus the distributive property must be used in the proof of proposition \@ref(prp:onethirty).
+
+
+## Subspace
+
+By considering subspaces, we can greatly expand our examples of vector spaces.
+
+```{definition}
+A subset \(W\) of a vector space \(V\) is called a **subspace** of \(V\) if \(W\) is also a vector space with the same additive identity, addition, and scalar multiplication as on \(V\).
+```
+
+**Fact** : Some people use the terminology *linear subspace* , which means the same as subspace.
+
+```{example}
+\(\{(x_1,x_2,0) : x_1,x_2\in  F\}\) is a subspace of \(F^3\).
+```
+
+The next proposition  gives the easiest way to check whether a subset of a vector space is a subspace.
+
+
+```{proposition}
+A subset \(W\) of a vector space \(V\) is called a **subspace** of \(V\) if and only if \(W\) satisfies the following three conditions:
+
+1. **Additive Identity**: The zero vector \(\mathbf{0}\) is in \(W\).
+2. **Closed Under Addition**: For any vectors \(\mathbf{u}\) and \(\mathbf{w}\) in \(W\), their sum \(\mathbf{u} + \mathbf{w}\) is also in \(W\).
+3. **Closed Under Scalar Multiplication**: For any scalar \(a\) in the field \(F\) and any vector \(\mathbf{u}\) in \(W\), the product \(a\mathbf{u}\) is also in \(W\).
+```
+
+```{proof}
+- \(\implies\)\
+If \(U\) is a subspace of \(V\) then \(U\)
+satisfies the three conditions above by the
+definition of vector space.
+
+- \(\impliedby\)\
+Now suppose \(U\) satisfies the three conditions above. 
+  - The first condition ensures that the additive identity of \(V\) is in \(U\). 
+  - The second condition ensures that addition makes sense on \(U\). 
+  - The third condition ensures that scalar multiplication makes sense on \(U\).
+  Certainly! Here's the rewritten content in LaTeX:
+
+  If  \({u} \in U\) then \(-{u}\) (which equals \((-1)\mathbf{u}\) by property 1.32) is also in \(U\) by the third condition above. Hence every element of \(U\) has an additive inverse in \(U\). The other parts of the definition of a vector space, such as associativity and commutativity, are automatically satisfied for \(U\) because they hold in the larger space \(V\). Thus, \(U\) is a vector space and hence is a subspace of \(V\).
+```
+
+
+
+

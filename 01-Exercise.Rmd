@@ -1,63 +1,63 @@
-# Exercise1 
+# Exercise 1 
 
 ## Exercise 1A
 
 1. Show that $\alpha + \beta = \beta + \alpha$ for all $\alpha, \beta \in \mathbb{C}$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex1.png') 
-```
+
+  ![](fig/Ex1A/Ex1.png) 
+
 
 2. Show that $(\alpha + \beta) + \lambda = \alpha + (\beta + \lambda)$ for all $\alpha, \beta, \lambda \in \mathbb{C}$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex2.png') 
-```
+
+  ![](fig/Ex1A/Ex2.png) 
+
 
 3. Show that $(\alpha \beta)\lambda = \alpha(\beta \lambda)$ for all $\alpha, \beta, \lambda \in \mathbb{C}$.
 
 
 4. Show that $\lambda(\alpha + \beta) = \lambda\alpha + \lambda\beta$ for all $\lambda, \alpha, \beta \in \mathbb{C}$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex4.png') 
-```
+
+  ![](fig/Ex1A/Ex4.png) 
+
 
 5. Show that for every $\alpha \in \mathbb{C}$, there exists a unique $\beta \in \mathbb{C}$ such that $\alpha + \beta = 0$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex5.png') 
-```
+
+  ![](fig/Ex1A/Ex5.png) 
+
 
 6. Show that for every $\alpha \in \mathbb{C}$ with $\alpha \neq 0$, there exists a unique $\beta \in \mathbb{C}$ such that $\alpha\beta = 1$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex6.png') 
-```
+
+  ![](fig/Ex1A/Ex6.png) 
+
 
 7. Show that $\frac{-1 + \sqrt{3}i}{2}$ is a cube root of 1 (meaning that its cube equals 1).
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex7.png') 
-```
+
+  ![](fig/Ex1A/Ex7.png) 
+
 
 8. Find two distinct square roots of $i$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex8.png') 
-```
+
+  ![](fig/Ex1A/Ex8.png) 
+
 
 9. Find $x \in \mathbb{R}^4$ such that $(4, -3, 1, 7) + 2x = (5, 9, -6, 8)$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex9.png') 
-```
+
+  ![](fig/Ex1A/Ex9.png) 
+
 
 10. Explain why there does not exist $\lambda \in \mathbb{C}$ such that $\lambda(2 - 3i, 5 + 4i, -6 + 7i) = (12 - 5i, 7 + 22i, -32 - 9i)$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1A/Ex10.png') 
-```
+
+  ![](fig/Ex1A/Ex10.png) 
+
 
 11. Show that $(x + y) + z = x + (y + z)$ for all $x, y, z \in \mathbb{F}_n$.
 
@@ -75,100 +75,100 @@ Let $v\in V$. Then there exist a unique additive inverse of $v$. We denote it by
 
 2. Suppose $a \in \mathbb{F} ,v\in V$, and $v= 0$. Prove that $a=0$ or $v=0$.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex2.jpg') 
-```
+
+  ![](fig/Ex1B/Ex2.jpg) 
+
 
 3.
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex3-1.jpg') 
-```
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex3-2.jpg') 
-```
+
+  ![](fig/Ex1B/Ex3-1.jpg) 
+
+
+  ![](fig/Ex1B/Ex3-2.jpg) 
+
 
 4. 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex4.png') 
-```
+
+  ![](fig/Ex1B/Ex4.png) 
+
 
 5.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex5-1.png') 
-```
+
+  ![](fig/Ex1B/Ex5-1.png) 
 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex5-2.png') 
-```
+
+
+  ![](fig/Ex1B/Ex5-2.png) 
+
 
 
 6.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex6.png') 
-```
+
+  ![](fig/Ex1B/Ex6.png) 
+
 
 7. Suppose $S$ is a non-empty set. 
 Let $V^S$ denote the set of functions from $S$ to $V$.
 Define a natural addition and scalar multiplication on $V^S$, and show that $V^S$ is a vector space with these definitions.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex7-1.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex7-2.png') 
-```
+  ![](fig/Ex1B/Ex7-1.png) 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex7-3.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex7-4.png') 
-```
+
+  ![](fig/Ex1B/Ex7-2.png) 
+
+
+
+  ![](fig/Ex1B/Ex7-3.png) 
+
+
+
+  ![](fig/Ex1B/Ex7-4.png) 
+
 
 8. 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex8-1.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex8-2.png') 
-```
+  ![](fig/Ex1B/Ex8-1.png) 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex8-3.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex8-4.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1B/Ex8-5.png') 
-```
+  ![](fig/Ex1B/Ex8-2.png) 
+
+
+
+  ![](fig/Ex1B/Ex8-3.png) 
+
+
+
+  ![](fig/Ex1B/Ex8-4.png) 
+
+
+
+  ![](fig/Ex1B/Ex8-5.png) 
+
 
 
 ## Exercise 1C
 
 1.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex1-1.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex1-2.png') 
-```
+  ![](fig/Ex1C/Ex1-1.png) 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex1-3.png') 
-```
+
+
+  ![](fig/Ex1C/Ex1-2.png) 
+
+
+
+  ![](fig/Ex1C/Ex1-3.png) 
+
 
 
 2.
@@ -179,60 +179,67 @@ is a subspace of $\mathbb{F}^4$ if and only if $b = 0$.
 
 *Proof of Statement 1*
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-a-1.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-a-2.png') 
-```
+  ![](fig/Ex1C/Ex2-a-1.png) 
+
+
+
+  ![](fig/Ex1C/Ex2-a-2.png) 
+
 
 **Statement 2** : The set of continuous real-valued functions on the interval $[0, 1]$ is a subspace of $\mathbb{R}^[0,1]$
 
 *Proof of statement 2*:
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-1.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-2.png') 
-```
+  ![](fig/Ex1C/Ex2-1.png) 
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-3.png') 
-```
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-4.png') 
-```
+
+  ![](fig/Ex1C/Ex2-2.png) 
+
+
+
+  ![](fig/Ex1C/Ex2-3.png) 
+
+
+
+  ![](fig/Ex1C/Ex2-4.png) 
+
 
 **Statement 3** :  The set of differentiable real-valued functions on $\mathbb{R}$ is a subspace of $\mathbb{R}^{\mathbb{R}}$.
 
 *Proof of Statement 3*
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-c.png') 
-```
+
+  ![](fig/Ex1C/Ex2-c.png) 
+
 **Statement 4** :  The set of differentiable real-valued functions $\mathbb{R}$ on the interval (0, 3) such that $f'(2)=b$ is a subspace of $\mathbb{R}^{(0,3)}$ if and only if $b = 0$.
 
 *Proof of Statement 4*
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-d.png') 
-```
+
+  ![](fig/Ex1C/Ex2-d.png) 
+
 
 **Statement 5** : The set of all sequences of complex numbers with limit $0$ is a subspace of $\mathbb{C}^{\infty}$
 
 *Proof of Statement 5*:
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex2-e.png') 
-```
+
+  ![](fig/Ex1C/Ex2-e.png) 
 
 
-3.
 
-```{r echo=FALSE}
-  knitr::include_graphics('fig/Ex1C/Ex3.png') 
-```
+3. \
+
+
+  ![](fig/Ex1C/Ex3.png) 
+  
+4. \
+  ![](fig/Ex1C/Ex4.png) 
+![](fig/Ex1C/Ex4-2.png) 
+5. \
+![](fig/Ex1C/Ex5.png) 
+
+

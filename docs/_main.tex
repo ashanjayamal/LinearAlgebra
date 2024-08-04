@@ -80,7 +80,7 @@
 
 \title{Linear Algebra}
 \author{Ashan Jayamal}
-\date{2024-06-27}
+\date{2024-08-04}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -112,7 +112,17 @@
 
 \(\mathbb{R}^n\) and \(\mathbb{C}^n\)
 
-We are already be familiar with basic properties of the set of real numbers(\(\mathbb{R}\)). Complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of \(−1\), denoted by \(i\) that obeys the usual rules of arithmetic. Here are the formal definition.
+We are already be familiar with basic properties of the set of real numbers(\(\mathbb{R}\)).
+
+Some nonconstant polynomials with real coefficients have no real
+zeros.
+
+\textbf{Example}: the equation
+\[x^2+1=0\]
+has no real solutions.
+Thus we invent a solution, called \(i\), with the property that \(i^2 = -i\).
+
+Futhur, complex numbers comes when we can take square roots of negative numbers. The idea is to assume we have a square root of \(−1\), denoted by \(i\) that obeys the usual rules of arithmetic. Here are the formal definition.
 
 \begin{definition}[Complex Numbers ]
 \protect\hypertarget{def:unnamed-chunk-1}{}\label{def:unnamed-chunk-1}\leavevmode
@@ -350,40 +360,40 @@ Let \(0\) denote the list of length \(n\) whose coordinates are all \(0\):
 
 Here we are using the symbol \(0\) in two different ways---on the left side of the equation above, the symbol \(0\) denotes a list of length \(n\), which is an element of \(0\), whereas on the right side, each \(0\) denotes a number. This potentially confusing practice actually causes no problems because the context should always make clear which \(0\) is intended.
 
-\includegraphics[width=13.08in]{fig/Chapter-1/fig1}
+\includegraphics{fig/Chapter-1/fig1.png}
 
 \begin{example}[Context determines which 0 is intended]
-\protect\hypertarget{exm:unnamed-chunk-15}{}\label{exm:unnamed-chunk-15}Consider the statement that \(0\) is an additive identity for \(F^n\):
+\protect\hypertarget{exm:unnamed-chunk-14}{}\label{exm:unnamed-chunk-14}Consider the statement that \(0\) is an additive identity for \(F^n\):
 
 \[ x + 0 = x \quad \text{for all } x \in F^n. \]
 
 Here, the \(0\) above refers to the list defined earlier, not the number \(0\), because we have not defined the sum of an element of \(F^n\) (namely, \(x\)) and the number \(0\).
 \end{example}
 
-\includegraphics[width=21in]{fig/Chapter-1/fig2}
+\includegraphics{fig/Chapter-1/fig2.png}
 
 A picture can aid our intuition. We will draw pictures in \(\mathbb{R}^2\) because we can sketch this space on two-dimensional surfaces such as paper and computer screens. A typical element of \(\mathbb{R}^2\) is a point \(\mathbf{v} = (a, b)\). Sometimes we think of \(\mathbf{v}\) not as a point but as an arrow starting at the origin and ending at \((a, b)\), as shown here. When we think of an element of \(\mathbb{R}^2\) as an arrow, we refer to it as a vector.
 
-\includegraphics[width=12.75in]{fig/Chapter-1/fig3}
+\includegraphics{fig/Chapter-1/fig3.png}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-18}{}\label{exm:unnamed-chunk-18}\(v_1:=(2,1),v_2:=(3,4)\in \mathbb{R}^2\) can be present as follows,
+\protect\hypertarget{exm:unnamed-chunk-15}{}\label{exm:unnamed-chunk-15}\(v_1:=(2,1),v_2:=(3,4)\in \mathbb{R}^2\) can be present as follows,
 \end{example}
 
-\begin{figure}
-\includegraphics[width=16.74in]{fig/Chapter-1/fig4} \caption{Elements of R2 can be thought of as points or as vectors.}\label{fig:unnamed-chunk-19}
-\end{figure}
+\includegraphics{fig/Chapter-1/fig4.png}
 
 When we think of vectors in \(\mathbb{R}^2\) as arrows, we can move an arrow parallel to itself (without changing its length or direction) and still consider it the same vector. With this viewpoint, you'll often gain a better understanding by dispensing with the coordinate axes and explicit coordinates, simply thinking of the vector itself, as shown in the figure here. The two arrows depicted have the same length and direction, so we regard them as the same vector.
 
 Whenever we use pictures in \(\mathbb{R}^2\) or use the somewhat vague language of points and vectors, remember that these are just aids to our understanding, not substitutes for the actual mathematics that we will develop. Although we cannot draw good pictures in high-dimensional spaces, the elements of these spaces are as rigorously defined as elements of \(\mathbb{R}^2\).
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-20}{}\label{exm:unnamed-chunk-20}\((2, -3, \pi, \ldots, \sqrt{2})\) is an element of \(\mathbb{R}^5\), and we may casually refer to it as a point in \(\mathbb{R}^5\) or a vector in \(\mathbb{R}^5\) without worrying about whether the geometry of \(\mathbb{R}^5\) has any physical meaning.
+\protect\hypertarget{exm:unnamed-chunk-16}{}\label{exm:unnamed-chunk-16}\((2, -3, \pi, \ldots, \sqrt{2})\) is an element of \(\mathbb{R}^5\), and we may casually refer to it as a point in \(\mathbb{R}^5\) or a vector in \(\mathbb{R}^5\) without worrying about whether the geometry of \(\mathbb{R}^5\) has any physical meaning.
 \end{example}
 
 \begin{figure}
-\includegraphics[width=8.5in]{fig/Chapter-1/fig5} \caption{A vector}\label{fig:unnamed-chunk-21}
+\centering
+\includegraphics{fig/Chapter-1/fig5.png}
+\caption{A vector}
 \end{figure}
 
 \textbf{Fun fact}: Mathematical models of the economy
@@ -395,13 +405,11 @@ algebraic approach works well. Thus
 our subject is called linear algebra.
 
 \begin{definition}[Summation of two vectors]
-\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}We have two vectors, \(\mathbf{a}\) and \(\mathbf{b}\), in \(\mathbb{R}^2\). We want to add them such that the initial point of \(\mathbf{b}\) coincides with the end point of \(\mathbf{a}\). The sum \(\mathbf{a} + \mathbf{b}\) equals the vector whose initial point is the same as that of \(\mathbf{a}\) and whose end point is the same as that of \(\mathbf{b}\), as shown here (red one is a+b).
+\protect\hypertarget{def:unnamed-chunk-17}{}\label{def:unnamed-chunk-17}We have two vectors, \(\mathbf{a}\) and \(\mathbf{b}\), in \(\mathbb{R}^2\). We want to add them such that the initial point of \(\mathbf{b}\) coincides with the end point of \(\mathbf{a}\). The sum \(\mathbf{a} + \mathbf{b}\) equals the vector whose initial point is the same as that of \(\mathbf{a}\) and whose end point is the same as that of \(\mathbf{b}\), as shown here (red one is a+b).
 \end{definition}
 
-\#\texttt{\{r\ echo=FALSE,fig.cap=\textquotesingle{}The\ sum\ of\ two\ vectors.\ \textquotesingle{}\ ,\ fig.align\ =\ \#\textquotesingle{}center\textquotesingle{}\}\ \#\ \ knitr::include\_graphics(\textquotesingle{}fig/Chapter-1/fig6.gif\textquotesingle{})\ \ \#}
-
 \begin{definition}[The additive inverse in Fn,-v]
-\protect\hypertarget{def:unnamed-chunk-23}{}\label{def:unnamed-chunk-23}A vector \(\mathbf{v}\) in \(\mathbb{F}^n\), its additive inverse, denoted by \(-\mathbf{v}\), is the vector \(-\mathbf{v}\) in \(\mathbb{F}^n\) such that:
+\protect\hypertarget{def:unnamed-chunk-18}{}\label{def:unnamed-chunk-18}A vector \(\mathbf{v}\) in \(\mathbb{F}^n\), its additive inverse, denoted by \(-\mathbf{v}\), is the vector \(-\mathbf{v}\) in \(\mathbb{F}^n\) such that:
 
 \[ \mathbf{v} + (-\mathbf{v}) = \mathbf{0} \]
 
@@ -414,7 +422,11 @@ Given a vector \(\mathbf{x}\) in \(\mathbb{R}^2\), its additive inverse, denoted
 
 As you can see, the vector labelled \(-\mathbf{x}\) has the same length as the vector labelled \(\mathbf{x}\) but points in the opposite direction.
 
-\#\texttt{\{r\ echo=FALSE,fig.cap=\textquotesingle{}A\ vector\ and\ its\ additive\ inverse.\textquotesingle{}\ ,\ \#fig.align\ =\ \textquotesingle{}center\textquotesingle{}\}\ \#\ \ knitr::include\_graphics(\textquotesingle{}fig/Chapter-1/fig7.gif\textquotesingle{})\ \ \#}
+\begin{figure}
+\centering
+\includegraphics{fig/Chapter-1/fig7.png}
+\caption{A vector and its additive inverse.}
+\end{figure}
 
 We've dealt with addition in \(\mathbb{F}^n\), and now we'll explore multiplication. While we could define a coordinate-wise multiplication in \(\mathbb{F}^n\), experience shows that it's not useful for our purposes. Instead, we focus on scalar multiplication, which will be central to our subject.
 
@@ -422,10 +434,28 @@ Specifically, we need to define what it means to multiply an element of \(\mathb
 
 \section{Definition of Vector space}\label{definition-of-vector-space}
 
+\textbf{The motivation for vector space definition}
+
+The motivation for the definition of a vector space comes from properties of addition and scalar multiplication in \(F^n\):
+
+\begin{itemize}
+\tightlist
+\item
+  Addition is commutative, associative, and has an identity.
+\item
+  Every element has an additive inverse.
+\item
+  Scalar multiplication is associative.
+\item
+  Scalar multiplication by \(1\) acts as expected.
+\item
+  Addition and scalar multiplication are connected by distributive properties.
+\end{itemize}
+
 We will define a vector space to be a set \(V\)with an addition and a scalar multiplication on \(V\) that satisfy the properties in the paragraph above.
 
 \begin{definition}[addition, scalar multiplication]
-\protect\hypertarget{def:unnamed-chunk-24}{}\label{def:unnamed-chunk-24}\leavevmode
+\protect\hypertarget{def:unnamed-chunk-19}{}\label{def:unnamed-chunk-19}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -437,10 +467,18 @@ We will define a vector space to be a set \(V\)with an addition and a scalar mul
 
 \end{definition}
 
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-20}{}\label{exm:unnamed-chunk-20}Suppose \(V\) is the set of real-valued functions on the interval \([0, l]\). For \(f,g \in V\) and \(\lambda \in R\), define \(f+ g\) and \(\lambda f\) by
+\[[f+g](x) = f (x) + g(x)\]
+and
+\[[\lambda f](x) + = \lambda f (x) \].
+Thus \(f+g \in V, \lambda f\in V\).
+\end{example}
+
 Now we are ready to give the formal definition of a vector space
 
 \begin{definition}[Vector Space]
-\protect\hypertarget{def:unnamed-chunk-25}{}\label{def:unnamed-chunk-25}
+\protect\hypertarget{def:unnamed-chunk-21}{}\label{def:unnamed-chunk-21}
 
 A vector space is a set \(V\) along with an addition on \(V\) and a scalar multiplication on \(V\) such that the following properties hold.
 
@@ -465,18 +503,18 @@ A vector space is a set \(V\) along with an addition on \(V\) and a scalar multi
 The following geometric language sometimes aids our intuition.
 
 \begin{definition}[Vector]
-\protect\hypertarget{def:unnamed-chunk-26}{}\label{def:unnamed-chunk-26}Elements of a vector space are called vectors or points.
+\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}Elements of a vector space are called vectors or points.
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-27}{}\label{exm:unnamed-chunk-27}The simplest vector space is \{0\}, which contains only one point.
+\protect\hypertarget{exm:unnamed-chunk-23}{}\label{exm:unnamed-chunk-23}The simplest vector space is \{0\}, which contains only one point.
 \end{example}
 
 The scalar multiplication in a vector space depends on \(F\).
 Thus when we need to be precise, we will say that \(V\) is a vector space over \(F\) instead of saying simply that \(V\) is a vector space.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-28}{}\label{exm:unnamed-chunk-28}\leavevmode
+\protect\hypertarget{exm:unnamed-chunk-24}{}\label{exm:unnamed-chunk-24}\leavevmode
 
 \begin{itemize}
 \tightlist
@@ -491,7 +529,7 @@ Thus when we need to be precise, we will say that \(V\) is a vector space over \
 Usually the choice of \(F\) is either clear from the context or irrelevant. Thus we often assume that \(F\) is lurking in the background without specifically mentioning it. With the usual operations of addition and scalar multiplication, \(F^n\) is a vector space over \(F\), as you should verify. The example of \(F^n\) motivated our definition of vector space.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-29}{}\label{exm:unnamed-chunk-29}\(F^\infty\) is defined to be the set of all sequences of elements of \(F\):
+\protect\hypertarget{exm:unnamed-chunk-25}{}\label{exm:unnamed-chunk-25}\(F^\infty\) is defined to be the set of all sequences of elements of \(F\):
 \[F^\infty = \{(f_1, f_2, \ldots) \mid f_i \in F \text{ for } i = 1, 2, \ldots\}.\]
 
 Addition and scalar multiplication on \(F^\infty\) are defined as expected:
@@ -527,7 +565,7 @@ be lists, functions, or weird objects.
 Now let's verify following example
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-30}{}\label{exm:unnamed-chunk-30}
+\protect\hypertarget{exm:unnamed-chunk-26}{}\label{exm:unnamed-chunk-26}
 
 \textbf{\(F^S\) is a vector space}
 
@@ -588,7 +626,7 @@ In other words, we can think of \(F^n\) as \(F^{\{1,2,\ldots,n\}}\).
 Similarly, we can think of \(F^\infty\) as \(F^{\{1,2,\ldots\}}\).
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-32}{}\label{prp:unnamed-chunk-32}A vector space has a unique additive identity.
+\protect\hypertarget{prp:unnamed-chunk-28}{}\label{prp:unnamed-chunk-28}A vector space has a unique additive identity.
 \end{proposition}
 
 \begin{proof}
@@ -601,7 +639,7 @@ Thus \(0 ′ = 0\), proving that \(V\) has only one additive identity.
 \end{proof}
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-34}{}\label{prp:unnamed-chunk-34}Every element in a vector space has a unique additive inverse.
+\protect\hypertarget{prp:unnamed-chunk-30}{}\label{prp:unnamed-chunk-30}Every element in a vector space has a unique additive inverse.
 \end{proposition}
 
 \begin{proof}
@@ -635,7 +673,70 @@ Adding the additive inverse of \(0v\) to both sides of the equation above gives 
 The result in proposition \ref{prp:onethirty} involves the additive identity of \(V\) and scalar multiplication.
 The only part of the defnition of a vector space that connects vector addition and scalar multiplication is the distributive property. Thus the distributive property must be used in the proof of proposition \ref{prp:onethirty}.
 
-\chapter{Exercise1}\label{exercise1}
+\section{Subspace}\label{subspace}
+
+By considering subspaces, we can greatly expand our examples of vector spaces.
+
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-33}{}\label{def:unnamed-chunk-33}A subset \(W\) of a vector space \(V\) is called a \textbf{subspace} of \(V\) if \(W\) is also a vector space with the same additive identity, addition, and scalar multiplication as on \(V\).
+\end{definition}
+
+\textbf{Fact} : Some people use the terminology \emph{linear subspace} , which means the same as subspace.
+
+\begin{example}
+\protect\hypertarget{exm:unnamed-chunk-34}{}\label{exm:unnamed-chunk-34}\(\{(x_1,x_2,0) : x_1,x_2\in  F\}\) is a subspace of \(F^3\).
+\end{example}
+
+The next proposition gives the easiest way to check whether a subset of a vector space is a subspace.
+
+\begin{proposition}
+\protect\hypertarget{prp:unnamed-chunk-35}{}\label{prp:unnamed-chunk-35}
+
+A subset \(W\) of a vector space \(V\) is called a \textbf{subspace} of \(V\) if and only if \(W\) satisfies the following three conditions:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Additive Identity}: The zero vector \(\mathbf{0}\) is in \(W\).
+\item
+  \textbf{Closed Under Addition}: For any vectors \(\mathbf{u}\) and \(\mathbf{w}\) in \(W\), their sum \(\mathbf{u} + \mathbf{w}\) is also in \(W\).
+\item
+  \textbf{Closed Under Scalar Multiplication}: For any scalar \(a\) in the field \(F\) and any vector \(\mathbf{u}\) in \(W\), the product \(a\mathbf{u}\) is also in \(W\).
+\end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+\leavevmode
+
+\begin{itemize}
+\item
+  \(\implies\)\\
+  If \(U\) is a subspace of \(V\) then \(U\)
+  satisfies the three conditions above by the
+  definition of vector space.
+\item
+  \(\impliedby\)\\
+  Now suppose \(U\) satisfies the three conditions above.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The first condition ensures that the additive identity of \(V\) is in \(U\).
+  \item
+    The second condition ensures that addition makes sense on \(U\).
+  \item
+    The third condition ensures that scalar multiplication makes sense on \(U\).
+    Certainly! Here's the rewritten content in LaTeX:
+  \end{itemize}
+
+  If \({u} \in U\) then \(-{u}\) (which equals \((-1)\mathbf{u}\) by property 1.32) is also in \(U\) by the third condition above. Hence every element of \(U\) has an additive inverse in \(U\). The other parts of the definition of a vector space, such as associativity and commutativity, are automatically satisfied for \(U\) because they hold in the larger space \(V\). Thus, \(U\) is a vector space and hence is a subspace of \(V\).
+\end{itemize}
+
+\end{proof}
+
+\chapter{Exercise 1}\label{exercise-1}
 
 \section{Exercise 1A}\label{exercise-1a}
 
@@ -646,7 +747,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Show that \(\alpha + \beta = \beta + \alpha\) for all \(\alpha, \beta \in \mathbb{C}\).
 \end{enumerate}
 
-\includegraphics[width=17.65in]{fig/Ex1A/Ex1}
+\includegraphics{fig/Ex1A/Ex1.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -656,7 +757,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Show that \((\alpha + \beta) + \lambda = \alpha + (\beta + \lambda)\) for all \(\alpha, \beta, \lambda \in \mathbb{C}\).
 \end{enumerate}
 
-\includegraphics[width=14.89in]{fig/Ex1A/Ex2}
+\includegraphics{fig/Ex1A/Ex2.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -667,7 +768,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Show that \(\lambda(\alpha + \beta) = \lambda\alpha + \lambda\beta\) for all \(\lambda, \alpha, \beta \in \mathbb{C}\).
 \end{enumerate}
 
-\includegraphics[width=9.76in]{fig/Ex1A/Ex4}
+\includegraphics{fig/Ex1A/Ex4.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -677,7 +778,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Show that for every \(\alpha \in \mathbb{C}\), there exists a unique \(\beta \in \mathbb{C}\) such that \(\alpha + \beta = 0\).
 \end{enumerate}
 
-\includegraphics[width=15.69in]{fig/Ex1A/Ex5}
+\includegraphics{fig/Ex1A/Ex5.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -687,7 +788,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Show that for every \(\alpha \in \mathbb{C}\) with \(\alpha \neq 0\), there exists a unique \(\beta \in \mathbb{C}\) such that \(\alpha\beta = 1\).
 \end{enumerate}
 
-\includegraphics[width=16.06in]{fig/Ex1A/Ex6}
+\includegraphics{fig/Ex1A/Ex6.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -697,7 +798,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Show that \(\frac{-1 + \sqrt{3}i}{2}\) is a cube root of 1 (meaning that its cube equals 1).
 \end{enumerate}
 
-\includegraphics[width=10.65in]{fig/Ex1A/Ex7}
+\includegraphics{fig/Ex1A/Ex7.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -707,7 +808,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Find two distinct square roots of \(i\).
 \end{enumerate}
 
-\includegraphics[width=10.28in]{fig/Ex1A/Ex8}
+\includegraphics{fig/Ex1A/Ex8.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -717,7 +818,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Find \(x \in \mathbb{R}^4\) such that \((4, -3, 1, 7) + 2x = (5, 9, -6, 8)\).
 \end{enumerate}
 
-\includegraphics[width=23.12in]{fig/Ex1A/Ex9}
+\includegraphics{fig/Ex1A/Ex9.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -727,7 +828,7 @@ The only part of the defnition of a vector space that connects vector addition a
   Explain why there does not exist \(\lambda \in \mathbb{C}\) such that \(\lambda(2 - 3i, 5 + 4i, -6 + 7i) = (12 - 5i, 7 + 22i, -32 - 9i)\).
 \end{enumerate}
 
-\includegraphics[width=10.36in]{fig/Ex1A/Ex10}
+\includegraphics{fig/Ex1A/Ex10.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -764,49 +865,35 @@ The only part of the defnition of a vector space that connects vector addition a
 \setcounter{enumi}{2}
 \item
   \includegraphics{fig/Ex1B/Ex3-1.jpg}
+
   \includegraphics{fig/Ex1B/Ex3-2.jpg}
 \item
 \end{enumerate}
 
-\includegraphics[width=10.51in]{fig/Ex1B/Ex4}
+\includegraphics{fig/Ex1B/Ex4.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{4}
-\tightlist
 \item
-\end{enumerate}
+  \includegraphics{fig/Ex1B/Ex5-1.png}
 
-\includegraphics[width=9.54in]{fig/Ex1B/Ex5-1}
-
-\includegraphics[width=9.72in]{fig/Ex1B/Ex5-2}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-\tightlist
+  \includegraphics{fig/Ex1B/Ex5-2.png}
 \item
-\end{enumerate}
-
-\includegraphics[width=9.94in]{fig/Ex1B/Ex6}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
-\tightlist
+  \includegraphics{fig/Ex1B/Ex6.png}
 \item
   Suppose \(S\) is a non-empty set.
   Let \(V^S\) denote the set of functions from \(S\) to \(V\).
   Define a natural addition and scalar multiplication on \(V^S\), and show that \(V^S\) is a vector space with these definitions.
 \end{enumerate}
 
-\includegraphics[width=9.33in]{fig/Ex1B/Ex7-1}
+\includegraphics{fig/Ex1B/Ex7-1.png}
 
-\includegraphics[width=8.79in]{fig/Ex1B/Ex7-2}
+\includegraphics{fig/Ex1B/Ex7-2.png}
 
-\includegraphics[width=8.42in]{fig/Ex1B/Ex7-3}
+\includegraphics{fig/Ex1B/Ex7-3.png}
 
-\includegraphics[width=8.33in]{fig/Ex1B/Ex7-4}
+\includegraphics{fig/Ex1B/Ex7-4.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -815,34 +902,26 @@ The only part of the defnition of a vector space that connects vector addition a
 \item
 \end{enumerate}
 
-\includegraphics[width=9.96in]{fig/Ex1B/Ex8-1}
+\includegraphics{fig/Ex1B/Ex8-1.png}
 
-\includegraphics[width=9.12in]{fig/Ex1B/Ex8-2}
+\includegraphics{fig/Ex1B/Ex8-2.png}
 
-\includegraphics[width=9.89in]{fig/Ex1B/Ex8-3}
+\includegraphics{fig/Ex1B/Ex8-3.png}
 
-\includegraphics[width=9.58in]{fig/Ex1B/Ex8-4}
+\includegraphics{fig/Ex1B/Ex8-4.png}
 
-\includegraphics[width=9.75in]{fig/Ex1B/Ex8-5}
+\includegraphics{fig/Ex1B/Ex8-5.png}
 
 \section{Exercise 1C}\label{exercise-1c}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-\end{enumerate}
+  \includegraphics{fig/Ex1C/Ex1-1.png}
 
-\includegraphics[width=9.19in]{fig/Ex1C/Ex1-1}
+  \includegraphics{fig/Ex1C/Ex1-2.png}
 
-\includegraphics[width=9.12in]{fig/Ex1C/Ex1-2}
-
-\includegraphics[width=14.06in]{fig/Ex1C/Ex1-3}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
+  \includegraphics{fig/Ex1C/Ex1-3.png}
 \item
 \end{enumerate}
 
@@ -852,47 +931,62 @@ is a subspace of \(\mathbb{F}^4\) if and only if \(b = 0\).
 
 \emph{Proof of Statement 1}
 
-\includegraphics[width=9.96in]{fig/Ex1C/Ex2-a-1}
+\includegraphics{fig/Ex1C/Ex2-a-1.png}
 
-\includegraphics[width=8.01in]{fig/Ex1C/Ex2-a-2}
+\includegraphics{fig/Ex1C/Ex2-a-2.png}
 
 \textbf{Statement 2} : The set of continuous real-valued functions on the interval \([0, 1]\) is a subspace of \(\mathbb{R}^[0,1]\)
 
 \emph{Proof of statement 2}:
 
-\includegraphics[width=15.81in]{fig/Ex1C/Ex2-1}
+\includegraphics{fig/Ex1C/Ex2-1.png}
 
-\includegraphics[width=12.39in]{fig/Ex1C/Ex2-2}
+\includegraphics{fig/Ex1C/Ex2-2.png}
 
-\includegraphics[width=9.39in]{fig/Ex1C/Ex2-3}
+\includegraphics{fig/Ex1C/Ex2-3.png}
 
-\includegraphics[width=9.68in]{fig/Ex1C/Ex2-4}
+\includegraphics{fig/Ex1C/Ex2-4.png}
 
 \textbf{Statement 3} : The set of differentiable real-valued functions on \(\mathbb{R}\) is a subspace of \(\mathbb{R}^{\mathbb{R}}\).
 
 \emph{Proof of Statement 3}
 
-\includegraphics[width=19.4in]{fig/Ex1C/Ex2-c}
+\includegraphics{fig/Ex1C/Ex2-c.png}
+
 \textbf{Statement 4} : The set of differentiable real-valued functions \(\mathbb{R}\) on the interval (0, 3) such that \(f'(2)=b\) is a subspace of \(\mathbb{R}^{(0,3)}\) if and only if \(b = 0\).
 
 \emph{Proof of Statement 4}
 
-\includegraphics[width=9.03in]{fig/Ex1C/Ex2-d}
+\includegraphics{fig/Ex1C/Ex2-d.png}
 
 \textbf{Statement 5} : The set of all sequences of complex numbers with limit \(0\) is a subspace of \(\mathbb{C}^{\infty}\)
 
 \emph{Proof of Statement 5}:
 
-\includegraphics[width=12.33in]{fig/Ex1C/Ex2-e}
+\includegraphics{fig/Ex1C/Ex2-e.png}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{2}
 \tightlist
 \item
+  \hfill\break
 \end{enumerate}
 
-\includegraphics[width=9.62in]{fig/Ex1C/Ex3}
+\includegraphics{fig/Ex1C/Ex3.png}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \hfill\break
+  \includegraphics{fig/Ex1C/Ex4.png}
+  \includegraphics{fig/Ex1C/Ex4-2.png}
+\item
+  \hfill\break
+  \includegraphics{fig/Ex1C/Ex5.png}
+\end{enumerate}
 
   \bibliography{book.bib,packages.bib}
 
