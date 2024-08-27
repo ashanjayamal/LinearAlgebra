@@ -1,0 +1,147 @@
+# Exercise 02 (Finite-Dimensional Vector Spaces)
+
+## Exercise 2A 
+
+![](fig/Ex2A/Ex2A-01.png)
+![](fig/Ex2A/Ex2A-02.png)
+![](fig/Ex2A/Ex2A-03.png)
+![](fig/Ex2A/Ex2A-04.png)
+![](fig/Ex2A/Ex2A-05.png)
+![](fig/Ex2A/Ex2A-06.png)
+![](fig/Ex2A/Ex2A-07.png)
+![](fig/Ex2A/Ex2A-08.png)
+![](fig/Ex2A/Ex2A-09.png)
+![](fig/Ex2A/Ex2A-10.png)
+![](fig/Ex2A/Ex2A-11.png)
+![](fig/Ex2A/Ex2A-12.png)
+![](fig/Ex2A/Ex2A-13.png)
+![](fig/Ex2A/Ex2A-14.png)
+![](fig/Ex2A/Ex2A-15.png)
+![](fig/Ex2A/Ex2A-16.png)
+![](fig/Ex2A/Ex2A-17.png)
+![](fig/Ex2A/Ex2A-18.png)
+![](fig/Ex2A/Ex2A-19.png)
+![](fig/Ex2A/Ex2A-20.png)
+![](fig/Ex2A/Ex2A-21.png)
+![](fig/Ex2A/Ex2A-22.png)
+![](fig/Ex2A/Ex2A-23.png)
+![](fig/Ex2A/Ex2A-24.png)
+![](fig/Ex2A/Ex2A-25.png)
+![](fig/Ex2A/Ex2A-26.png)
+
+
+## Exercise 2B (Bases)
+
+1. Find all vector spaces that have exactly one basis.
+
+
+
+
+2. Verify all assertions in Example 
+
+
+
+
+3. 
+    a. Let $W$ be the subspace of $\mathbb{R}^5$ defined by
+   $$W = \{ (x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 \mid x_1 = 3x_2 \text{ and } x_3 = 7x_4 \}.   $$
+    Find a basis of $W$.
+    
+    b. Extend the basis in (a) to a basis of $\mathbb{R}^5$.
+    
+    c. Find a subspace$V$of$\mathbb{R}^5$such that $\mathbb{R}^5 = W \oplus V$.
+
+**Answer**: 
+a. 
+Let $(x_1,x_2,x_3,x_4,x_5)\in U$. Then $x_1=3x_2$ and $x_3=7x_4$. Thus,
+\begin{align}
+(x_1,x_2,x_3,x_4,x_5) &= (3x_2,x_2,7x_4,x_4,x_5)\\
+&=x_2(3,1,0,0,0)+x_4(0,0,7,1,0)+(0,0,0,0,1)
+\end{align}
+
+Let $v_1:=(3,1,0,0,0),v_2:=(0,0,7,1,0)$ and $v_3:=(0,0,0,0,1)$. Since $x_2,x_4,x_5\in \mathbb{R}$,then
+
+$$
+\text{span}(v_1,v_2,v_3)=U
+$$
+Now, we need to show that $v_1,v_2,v_3$ are linearly independent.Suppose that there exist $a_1,a_2,a_3\in \mathbb{R}$ such that,
+\begin{align}
+a_1(3,1,0,0,0)+a_2(0,0,7,1,0)+a_3(0,0,0,0,1) &=(0,0,0,0,0)\\
+(3a_1,a_1,7a_2,a_2,a_3)&=(0,0,0,0,0).
+\end{align}
+Thus, $a_1=a_2=a_3=0$. Hence, $v_1,v_2,v_3$ are linearly independent. 
+
+Therefore, the list $v_1,v_2,v_3$ is a basis of  $U$.
+
+b. 
+Let $v_4:=(0,1,0,0,0)$ and $v_5:=(0,0,1,0,0)$. 
+
+_Claim 1_: $\text{span}(v_1,v_2,v_3,v_4,v_5)=\mathbb{R}^5$.
+
+Let $(y_1,y_2,y_3,y_4,y_5)\in \mathbb{R}^5$. Then,
+\begin{align}
+(y_1,y_2,y_3,y_4,y_5) &= (y_1,y_2+\frac{y_1}{3}-\frac{y_1}{3},y_3+7y_4-7y_4,y_4,y_5)\\
+&=\frac{y_1}{3}(3,1,0,0,0)+y_4(0,0,7,1,0)+
+y_5(0,0,0,0,1)+\left(y_2-\frac{y_1}{3}\right)(0,1,0,0,0)+\left(y_3-7y_4\right)
+\end{align}
+
+Since $y_1,...,y_5\in \mathbb{R}$, we have established that the list $(3, 1, 0, 0, 0), (0, 0, 7, 1, 0), (0, 0, 0, 0, 1),(0,1,0,0,0),(0,0,1,0,0)$ spans $\mathbb{R}^5$
+
+_Claim 2_: the list of vectors $v_1,v_2,v_3,v_4,v_5$ are linearly independent.
+
+Suppose that there exist $b_1,...,b_5\in \mathbb{R}$ such that 
+\begin{align}
+b_1v_1+b_2v_2+b_3v_3+b_4v_4+b_5v_5 &=0\\
+b_1(3, 1, 0, 0, 0) + b_2(0, 0, 7, 1, 0) + b_3(0, 0, 0, 0, 1) + b_4(0, 1, 0, 0, 0) + b_5(0, 0, 1, 0, 0) &= (0, 0, 0, 0, 0)\\
+(3b1, b1 + b4, 7b2 + b5, b2, b3) &= (0, 0, 0, 0, 0).
+\end{align}
+This implies $b_1=b_2=b_3=b_4=b_5=0$.
+
+
+c. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. (a) Let $W$ be the subspace of $\mathbb{R}^5$ defined by
+$$W = \{(x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 \mid 6x_1 = x_2 \text{ and } x_3 + 2x_4 + 3x_5 = 0\}.$$
+Find a basis of $W$.
+
+    (b) Extend the basis in (a) to a basis of $\mathbb{R}^5$.
+
+    (c) Find a subspace $V$ of $\mathbb{R}^5$ such that $\mathbb{R}^5 = W \oplus V$.
+
+1. Suppose $V$ is finite-dimensional and $U, W$ are subspaces of $V$ such that $V = U + W$. Prove that there exists a basis of $V$ consisting of vectors in $U \cup W$.
+
+2. Prove or give a counterexample: If $p_0, p_1, p_2, p_3$ is a list in $P_3(\mathbb{R})$ such that none of the polynomials $p_0, p_1, p_2, p_3$ has degree 2, then $p_0, p_1, p_2, p_3$ is not a basis of $P_3(\mathbb{R})$.
+
+3. Suppose $v_1, v_2, v_3, v_4$ is a basis of $V$. Prove that $v_1 + v_2, v_2 + v_3, v_3 + v_4, v_4$ is also a basis of $V$.
+
+4. Prove or give a counterexample: If $v_1, v_2, v_3, v_4$ is a basis of $V$ and $W$ is a subspace of $V$ such that $v_1, v_2 \in W$ and $v_3 \notin W$ and $v_4 \notin W$, then $v_1, v_2$ is a basis of $W$.
+
+5. Suppose $v_1, \ldots, v_n$ is a list of vectors in $V$. For $i \in \{1, \ldots, n\}$, let
+$$w_i = v_1 + \cdots + v_i.$$
+Show that $v_1, \ldots, v_n$ is a basis of $V$ if and only if $w_1, \ldots, w_n$ is a basis of $V$.
+
+1.  Suppose $U$ and $W$ are subspaces of $V$ such that $V = U \oplus W$. Suppose also that $u_1, \ldots, u_m$ is a basis of $U$ and $w_1, \ldots, w_n$ is a basis of $W$. Prove that $u_1, \ldots, u_m, w_1, \ldots, w_n$ is a basis of $V$.
+
+2.  Suppose $V$ is a real vector space. Show that if $v_1, \ldots, v_n$ is a basis of $V$ (as a real vector space), then $v_1, \ldots, v_n$ is also a basis of the complexification $V_{\mathbb{C}}$ (as a complex vector space).
+See Exercise 8 in Section 1B for the definition of the complexification $V_{\mathbb{C}}$.
+
+
