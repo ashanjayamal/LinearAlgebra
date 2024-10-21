@@ -6,7 +6,6 @@ site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 url: https://ashanjayamal.github.io/LinearAlgebra/
-cover-image: cover.png
 description: |
   Linear Algbra done right
 link-citations: yes

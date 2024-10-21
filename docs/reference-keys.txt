@@ -41,3 +41,4 @@ exercise-1c
 exercise-02-finite-dimensional-vector-spaces
 exercise-2a
 exercise-2b-bases
+exercise-2c-dimesion
