@@ -1,7 +1,30 @@
 # Linear Maps Exercises
 
 ## Exercise 3A
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-01.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-02.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-03.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-04.png)
 
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-05.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-06.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-07.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-08.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-09.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-10.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-11.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-12.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-13.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-14.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-15.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-16.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-17.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-18.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-19.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-20.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-21.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-22.png)
+![](fig/Ex3A/LInear Algebra Done Right Ex 3A-23.png)
 
 ## Exercise 3B
 
