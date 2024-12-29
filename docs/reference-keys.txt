@@ -28,6 +28,7 @@ prp:onethirty
 def:unnamed-chunk-33
 exm:unnamed-chunk-34
 prp:unnamed-chunk-35
+def:unnamed-chunk-37
 vector-space
 rn-and-cn
 lists
@@ -44,6 +45,7 @@ exercise-2b-bases
 exercise-2c-dimesion
 linear-maps-exercises
 exercise-3a
+null-space-and-injectivity
 exercise-3b
 exercise-3c
 exercise-3d

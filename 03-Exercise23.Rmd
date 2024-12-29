@@ -1,11 +1,12 @@
 # Linear Maps Exercises
 
 ## Exercise 3A
+
+
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-01.png)
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-02.png)
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-03.png)
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-04.png)
-
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-05.png)
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-06.png)
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-07.png)
@@ -26,8 +27,45 @@
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-22.png)
 ![](fig/Ex3A/LInear Algebra Done Right Ex 3A-23.png)
 
+
+
+## Null Space and Injectivity
+
+In this section we will learn about two subspaces that are intimately connected  with each linear map. We begin with the set of vectors that get mapped to $0$.
+
+```{definition,name="null space"}
+For $𝑇\in \mathcal{L}(𝑉,𝑊)$, the null space of $𝑇$, denoted by $\text{null}𝑇$, is the subset of $𝑉$ consisting of those vectors that $𝑇$ maps to $0$ (Notation $\text{null}T$):
+ \[\text{null} 𝑇 = {𝑣 ∈ 𝑉 ∶ 𝑇𝑣 = 0}\]
+```
+
 ## Exercise 3B
 
+
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-01.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-01.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-02.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-03.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-04.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-05.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-06.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-07.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-08.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-09.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-10.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-11.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-12.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-13.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-14.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-15.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-16.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-17.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-18.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-19.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-20.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-21.png)
+![](fig/Ex3B/Exercise 3B part(1)/Exercise 3B part(1)-22.png)
+
 ## Exercise 3C
+
 
 ## Exercise 3D
